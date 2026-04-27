@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "Login" %}{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+  <div class="card shadow p-4 login-card" style="width: 400px;">
+
+    <h3 class="text-center mb-4">{% trans "Log in" %}</h3>
+
+    <form method="POST" autocomplete="off">
+      {% csrf_token %}
+      <input type="hidden" name="next" value="{{ request.GET.next }}">
+
+      <div class="mb-3">
+        <label class="form-label">{% trans "Email" %}</label>
+        <input type="email"
+               name="username"
+               value="{{ email|default:'' }}"
+               class="form-control"
+               autocomplete="off"
+               placeholder="{% trans 'Enter your email' %}"
+               required>
+      </div>
+<div class="mb-3 position-relative password-wrapper">
+  <label class="form-label">{% trans "Password" %}</label>
+  <input type="password"
+         name="password"
+         autocomplete="off"
+         id="passwordInput"
+         class="form-control"
+         placeholder="{% trans 'Type your password' %}"
+         required>
+  <span class="password-toggle" onclick="togglePassword()">
+    <i class="bi bi-eye" id="toggleIcon"></i>
+  </span>
+</div>
+
+      {% if messages %}
+        {% for message in messages %}
+          <div class="login-error-box">
+            <i class="bi bi-exclamation-triangle-fill"></i>
+            <span>{{ message }}</span>
+          </div>
+        {% endfor %}
+      {% endif %}
+
+      <button type="submit"
+              class="btn btn-primary w-100"
+              onclick="this.disabled=true; this.form.submit();">
+        {% trans "Log in" %}
+      </button>
+
+      <div class="text-center mt-3">
+        <p>
+          {% trans "Don't have an account?" %}
+          <a href="{% url 'register' %}">{% trans "Sign Up" %}</a>
+        </p>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<script>
+function togglePassword() {
+  const input = document.getElementById("passwordInput");
+  const icon = document.getElementById("toggleIcon");
+  if (input.type === "password") {
+    input.type = "text";
+    icon.classList.replace("bi-eye", "bi-eye-slash");
+  } else {
+    input.type = "password";
+    icon.classList.replace("bi-eye-slash", "bi-eye");
+  }
+}
+
+</script>
+{% endblock %}

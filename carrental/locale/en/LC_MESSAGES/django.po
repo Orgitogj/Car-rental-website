@@ -1,0 +1,819 @@
+# SUPERRENTAL - English Translation (Base Language)
+# Copyright (C) 2026 SUPERRENTAL
+msgid ""
+msgstr ""
+"Project-Id-Version: SUPERRENTAL 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-28 22:00+0100\n"
+"PO-Revision-Date: 2026-01-28 22:00+0100\n"
+"Last-Translator: SUPERRENTAL Team\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Navigation
+msgid "Home"
+msgstr "Home"
+
+msgid "Cars"
+msgstr "Cars"
+
+msgid "About Us"
+msgstr "About Us"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Contact Us"
+msgstr "Contact Us"
+
+msgid "Account"
+msgstr "Account"
+
+msgid "Log In"
+msgstr "Log In"
+
+msgid "Sign Up"
+msgstr "Sign Up"
+
+msgid "Logout"
+msgstr "Logout"
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+# Hero Section
+msgid "Find Your Perfect Car Rental"
+msgstr "Find Your Perfect Car Rental"
+
+msgid "Affordable, reliable, and easy to book."
+msgstr "Affordable, reliable, and easy to book."
+
+msgid "Your browser does not support the video tag."
+msgstr "Your browser does not support the video tag."
+
+# Search Form
+msgid "Pick up location - Tirana"
+msgstr "Pick up location - Tirana"
+
+msgid "Drop off location - Tirana"
+msgstr "Drop off location - Tirana"
+
+msgid "Pick-up Location"
+msgstr "Pick-up Location"
+
+msgid "Return Location"
+msgstr "Return Location"
+
+msgid "Pick-up Date"
+msgstr "Pick-up Date"
+
+msgid "Return Date"
+msgstr "Return Date"
+
+msgid "Car Type"
+msgstr "Car Type"
+
+msgid "Select car type"
+msgstr "Select car type"
+
+msgid "Select dates"
+msgstr "Select dates"
+
+msgid "Minimum 3 days"
+msgstr "Min 3 days"
+
+msgid "Search"
+msgstr "Search"
+
+msgid "Browse All Cars"
+msgstr "Browse All Cars"
+
+# Car Types
+msgid "Economy"
+msgstr "Economy"
+
+msgid "Family"
+msgstr "Family"
+
+msgid "SUV"
+msgstr "SUV"
+
+msgid "Luxury"
+msgstr "Luxury"
+
+msgid "Sports"
+msgstr "Sports"
+
+msgid "Family & Travel Cars"
+msgstr "Family & Travel Cars"
+
+msgid "Luxury & Premium Cars"
+msgstr "Luxury & Premium Cars"
+
+# Car Specifications
+msgid "Fuel Type"
+msgstr "Fuel Type"
+
+msgid "Petrol"
+msgstr "Petrol"
+
+msgid "Diesel"
+msgstr "Diesel"
+
+msgid "Hybrid"
+msgstr "Hybrid"
+
+msgid "Electric"
+msgstr "Electric"
+
+msgid "Gearbox"
+msgstr "Gearbox"
+
+msgid "Manual"
+msgstr "Manual"
+
+msgid "Automatic"
+msgstr "Automatic"
+
+msgid "Seats"
+msgstr "Seats"
+
+msgid "Number of seats"
+msgstr "Number of seats"
+
+msgid "Engine Power (HP)"
+msgstr "Engine Power (HP)"
+
+msgid "Production Year"
+msgstr "Production Year"
+
+msgid "Car Brand"
+msgstr "Car Brand"
+
+# Pricing
+msgid "/ day"
+msgstr "/ day"
+
+msgid "/ per day"
+msgstr "/ per day"
+
+msgid "Price ($/day)"
+msgstr "Price ($/day)"
+
+msgid "From $40/day"
+msgstr "From $40/day"
+
+msgid "Total Price"
+msgstr "Total Price"
+
+msgid "Days"
+msgstr "Days"
+
+msgid "day"
+msgstr "day"
+
+msgid "days"
+msgstr "days"
+
+msgid "Deposit"
+msgstr "Deposit"
+
+msgid "Minimum Rent"
+msgstr "Minimum Rent"
+
+msgid "Minimum Reservation"
+msgstr "Minimum Reservation"
+
+# Filters & Sorting
+msgid "Filter"
+msgstr "Filter"
+
+msgid "Reset"
+msgstr "Reset"
+
+msgid "Reset Filters"
+msgstr "Reset Filters"
+
+msgid "Select"
+msgstr "Select"
+
+msgid "Sort By"
+msgstr "Sort By"
+
+msgid "Price: Low to High"
+msgstr "Price: Low to High"
+
+msgid "Price: High to Low"
+msgstr "Price: High to Low"
+
+msgid "Newest"
+msgstr "Newest"
+
+msgid "Oldest"
+msgstr "Oldest"
+
+msgid "Popularity"
+msgstr "Popularity"
+
+# Car Listings
+msgid "Available Cars"
+msgstr "Available Cars"
+
+msgid "Cars Available"
+msgstr "Cars Available"
+
+msgid "No cars found"
+msgstr "No cars found"
+
+msgid "No available cars matching this filter"
+msgstr "No available cars matching this filter"
+
+msgid "Try adjusting or resetting your filters to see more cars."
+msgstr "Try adjusting or resetting your filters to see more cars."
+
+msgid "View Details"
+msgstr "View Details"
+
+msgid "Details"
+msgstr "Details"
+
+msgid "Book Now"
+msgstr "Book Now"
+
+msgid "Book This Car"
+msgstr "Book This Car"
+
+msgid "Book"
+msgstr "Book"
+
+# Car Details
+msgid "Description"
+msgstr "Description"
+
+msgid "is a premium vehicle offering comfort, performance and reliability. Perfect for travel and city experience."
+msgstr "is a premium vehicle offering comfort, performance and reliability. Perfect for travel and city experience."
+
+msgid "Insurance"
+msgstr "Insurance"
+
+msgid "This car includes full insurance and roadside assistance."
+msgstr "This car includes full insurance and roadside assistance."
+
+msgid "Prices Table"
+msgstr "Prices Table"
+
+msgid "Insurance Included"
+msgstr "Insurance Included"
+
+# Booking
+msgid "Complete Your Booking"
+msgstr "Complete Your Booking"
+
+msgid "Confirm"
+msgstr "Confirm"
+
+msgid "Cancel"
+msgstr "Cancel"
+
+msgid "Full Name"
+msgstr "Full Name"
+
+msgid "Your Name"
+msgstr "Your Name"
+
+msgid "Email Address"
+msgstr "Email Address"
+
+msgid "Your Email"
+msgstr "Your Email"
+
+msgid "Phone Number"
+msgstr "Phone Number"
+
+msgid "Leave a note (optional)"
+msgstr "Leave a note (optional)"
+
+msgid "Optional"
+msgstr "Optional"
+
+# Features & Benefits
+msgid "Why Choose Us?"
+msgstr "Why Choose Us?"
+
+msgid "No Hidden Fees"
+msgstr "No Hidden Fees"
+
+msgid "Transparent pricing with no surprises."
+msgstr "Transparent pricing with no surprises."
+
+msgid "Drive with confidence, insurance is always included."
+msgstr "Drive with confidence, insurance is always included."
+
+msgid "24/7 Support"
+msgstr "24/7 Support"
+
+msgid "We are always available whenever you need us."
+msgstr "We are always available whenever you need us."
+
+msgid "New & Clean Cars"
+msgstr "New & Clean Cars"
+
+msgid "Modern, well-maintained, and spotless vehicles."
+msgstr "Modern, well-maintained, and spotless vehicles."
+
+msgid "Economical"
+msgstr "Economical"
+
+msgid "Find the best deals that fit your budget."
+msgstr "Find the best deals that fit your budget."
+
+msgid "Reliable"
+msgstr "Reliable"
+
+msgid "All vehicles are regularly inspected and maintained."
+msgstr "All vehicles are regularly inspected and maintained."
+
+msgid "Easy"
+msgstr "Easy"
+
+msgid "Easy Booking"
+msgstr "Easy Booking"
+
+msgid "Fast booking process with instant confirmation."
+msgstr "Fast booking process with instant confirmation."
+
+msgid "Choose your location, dates, and car type."
+msgstr "Choose your location, dates, and car type."
+
+# Offers & Promotions
+msgid "Weekly Offers"
+msgstr "Weekly Offers"
+
+msgid "Save up to 25%% on selected cars! Book now before offers expire."
+msgstr "Save up to 25%% on selected cars! Book now before offers expire."
+
+msgid "View Offers"
+msgstr "View Offers"
+
+# Testimonials
+msgid "What our clients say"
+msgstr "What our clients say"
+
+msgid "Excellent service, easy booking and reliable cars!"
+msgstr "Excellent service, easy booking and reliable cars!"
+
+msgid "Great prices and very clean vehicles."
+msgstr "Great prices and very clean vehicles."
+
+msgid "Fast booking and excellent support."
+msgstr "Fast booking and excellent support."
+
+msgid "Very professional and transparent service."
+msgstr "Very professional and transparent service."
+
+msgid "Easy pickup and return process."
+msgstr "Easy pickup and return process."
+
+msgid "Best rental platform I’ve used so far."
+msgstr "Best rental platform I’ve used so far."
+
+# Statistics
+msgid "Our Achievements"
+msgstr "Our Achievements"
+
+msgid "Happy Clients"
+msgstr "Happy Clients"
+
+msgid "Years Experience"
+msgstr "Years Experience"
+
+msgid "Partners"
+msgstr "Partners"
+
+msgid "Our Partners"
+msgstr "Our Partners"
+
+msgid "Cities Covered"
+msgstr "Cities Covered"
+
+# About Us
+msgid "About FastCar Rentals"
+msgstr "About FastCar Rentals"
+
+msgid "At FastCar Rentals, we believe in making your travel experiences seamless, luxurious, and unforgettable. With a wide selection of premium vehicles, competitive pricing, and top-notch customer service, we are here to drive your adventures forward."
+msgstr "At FastCar Rentals, we believe in making your travel experiences seamless, luxurious, and unforgettable. With a wide selection of premium vehicles, competitive pricing, and top-notch customer service, we are here to drive your adventures forward."
+
+msgid "A Growing Rental Marketplace"
+msgstr "A Growing Rental Marketplace"
+
+msgid "By partnering with verified rental companies, we ensure that every vehicle listed on our platform meets quality and safety standards."
+msgstr "By partnering with verified rental companies, we ensure that every vehicle listed on our platform meets quality and safety standards."
+
+msgid "All rental companies on FastCar Rentals are carefully verified. Vehicles are inspected regularly, and pricing is always shown clearly before booking."
+msgstr "All rental companies on FastCar Rentals are carefully verified. Vehicles are inspected regularly, and pricing is always shown clearly before booking."
+
+msgid "Cars for Every Journey"
+msgstr "Cars for Every Journey"
+
+msgid "Affordable and efficient vehicles for everyday driving."
+msgstr "Affordable and efficient vehicles for everyday driving."
+
+# Contact
+msgid "Have questions or want to book a car? Get in touch with us!"
+msgstr "Have questions or want to book a car? Get in touch with us!"
+
+msgid "Subject"
+msgstr "Subject"
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Your Message"
+msgstr "Your Message"
+
+msgid "Send Message"
+msgstr "Send Message"
+
+# Call to Action
+msgid "Ready to Drive?"
+msgstr "Ready to Drive?"
+
+msgid "Book your car now and hit the road in minutes."
+msgstr "Book your car now and hit the road in minutes."
+
+# Authentication
+msgid "Sign in to your account"
+msgstr "Sign in to your account"
+
+msgid "Don't have an account?"
+msgstr "Don't have an account?"
+
+msgid "Already have an account?"
+msgstr "Already have an account?"
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Confirm Password"
+msgstr "Confirm Password"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Remember me"
+msgstr "Remember me"
+
+msgid "Forgot password?"
+msgstr "Forgot password?"
+
+# Footer
+msgid "Pages"
+msgstr "Pages"
+
+msgid "Follow Us"
+msgstr "Follow Us"
+
+msgid "All Rights Reserved"
+msgstr "All Rights Reserved"
+
+# Dashboard
+msgid "My Bookings"
+msgstr "My Bookings"
+
+msgid "My Cars"
+msgstr "My Cars"
+
+msgid "Add Car"
+msgstr "Add Car"
+
+msgid "Edit Car"
+msgstr "Edit Car"
+
+msgid "Company Profile"
+msgstr "Company Profile"
+
+msgid "Settings"
+msgstr "Settings"
+
+# Compare
+msgid "Compare"
+msgstr "Compare"
+
+msgid "Close"
+msgstr "Close"
+
+# Common Actions
+msgid "Save"
+msgstr "Save"
+
+msgid "Edit"
+msgstr "Edit"
+
+msgid "Delete"
+msgstr "Delete"
+
+msgid "Submit"
+msgstr "Submit"
+
+msgid "Back"
+msgstr "Back"
+
+msgid "Next"
+msgstr "Next"
+
+msgid "Previous"
+msgstr "Previous"
+
+msgid "Loading..."
+msgstr "Loading..."
+
+msgid "Please wait..."
+msgstr "Please wait..."
+
+# Status Messages
+msgid "Success!"
+msgstr "Success!"
+
+msgid "Error!"
+msgstr "Error!"
+
+msgid "Warning!"
+msgstr "Warning!"
+
+msgid "Info"
+msgstr "Info"
+
+# Validation
+msgid "This field is required"
+msgstr "This field is required"
+
+msgid "Invalid email address"
+msgstr "Invalid email address"
+
+msgid "Password too short"
+msgstr "Password too short"
+
+msgid "Passwords do not match"
+msgstr "Passwords do not match"
+
+msgid "Search Booking"
+msgstr "Search Booking"
+
+msgid "Please enter your booking reference"
+msgstr "Please enter your booking reference"
+
+msgid "Find Your Booking"
+msgstr "Find Your Booking"
+
+msgid "We offer high quality rental cars. Book now and enjoy your ride!"
+msgstr "We offer high quality rental cars. Book now and enjoy your ride!"
+
+msgid "Find My Booking"
+msgstr "Find My Booking"
+
+msgid "Your full name"
+msgstr "Your full name"
+
+msgid "Booking Reference"
+msgstr "Booking Reference"
+
+msgid "From"
+msgstr "From"
+
+msgid "Register"
+msgstr "Register"
+
+msgid "Create an Account"
+msgstr "Create an Account"
+
+msgid "Enter your full name"
+msgstr "Enter your full name"
+
+msgid "Enter your email"
+msgstr "Enter your email"
+
+msgid "Enter your phone number"
+msgstr "Enter your phone number"
+
+msgid "Type your password"
+msgstr "Type your password"
+
+msgid "Repeat your password"
+msgstr "Repeat your password"
+
+msgid "Reference"
+msgstr "Reference"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Car"
+msgstr "Car"
+
+msgid "To"
+msgstr "To"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Search Another Booking"
+msgstr "Search Another Booking"
+
+msgid "Booking Found"
+msgstr "Booking Found"
+
+msgid "Message Sent Successfully"
+msgstr "Message Sent Successfully"
+
+msgid "Thank you for contacting us!"
+msgstr "Thank you for contacting us!"
+
+msgid "We have received your message and will get back to you shortly."
+msgstr "We have received your message and will get back to you shortly."
+
+msgid "I confirm that I am over 21 years old to drive this car"
+msgstr "I confirm that I am over 21 years old to drive this car"
+
+msgid "Minimum %(days)s days required"
+msgstr "Minimum %(days)s days required"
+
+msgid "FastCar Rentals is a modern car rental marketplace that brings together trusted rental companies and hundreds of vehicles into one simple, transparent, and secure booking platform."
+msgstr "FastCar Rentals is a modern car rental marketplace that brings together trusted rental companies and hundreds of vehicles into one simple, transparent, and secure booking platform."
+
+msgid "Rental Companies"
+msgstr "Rental Companies"
+
+msgid "Successful Bookings"
+msgstr "Successful Bookings"
+
+msgid "Spacious and comfortable cars for families and long trips."
+msgstr "Spacious and comfortable cars for families and long trips."
+
+msgid "High-end cars for business travel and special occasions."
+msgstr "High-end cars for business travel and special occasions."
+
+msgid "Our platform is designed to protect customer data and ensure secure payments at every step."
+msgstr "Our platform is designed to protect customer data and ensure secure payments at every step."
+
+msgid "Trust & Transparency"
+msgstr "Trust & Transparency"
+
+msgid "View offers from multiple rental companies."
+msgstr "View offers from multiple rental companies."
+
+msgid "Reserve your car with transparent pricing and instant confirmation."
+msgstr "Reserve your car with transparent pricing and instant confirmation."
+
+msgid "How It Works"
+msgstr "How It Works"
+
+msgid "Family Cars & SUVs"
+msgstr "Family Cars & SUVs"
+
+msgid "Economy & City Cars"
+msgstr "Economy & City Cars"
+
+msgid "Our Mission"
+msgstr "Our Mission"
+
+msgid "Luxury & Premium Vehicles"
+msgstr "Luxury & Premium Vehicles"
+
+# Dynamic search messages
+msgid "Showing available cars from {{ start }} to {{ end }} from {{ company }}"
+msgstr "Showing available cars from {{ start }} to {{ end }} from {{ company }}"
+
+msgid "Showing available cars from {{ start }} to {{ end }}"
+msgstr "Showing available cars from {{ start }} to {{ end }}"
+
+msgid "Showing cars of type {{ type }} from {{ company }}"
+msgstr "Showing cars of type {{ type }} from {{ company }}"
+
+msgid "Showing cars from {{ company }}"
+msgstr "Showing cars from {{ company }}"
+
+msgid "Showing cars of type {{ type }}"
+msgstr "Showing cars of type {{ type }}"
+
+msgid "Showing filtered results"
+msgstr "Showing filtered results"
+
+msgid "No booking found with the provided details"
+msgstr "No booking found with the provided details"
+
+msgid "Please select the dates"
+msgstr "Please select the dates"
+
+msgid "Minimum"
+msgstr "Minimum"
+
+msgid "days required"
+msgstr "days required"
+
+msgid "Confirm Booking"
+msgstr "Confirm Booking"
+
+msgid "Available"
+msgstr "Available"
+
+msgid "Unavailable"
+msgstr "Unavailable"
+
+msgid "Select return date"
+msgstr "Select return date"
+
+msgid "Checking availability..."
+msgstr "Checking availability..."
+
+msgid "Select dates to check availability"
+msgstr "Select dates to check availability"
+
+msgid "Error checking availability"
+msgstr "Error checking availability"
+
+msgid "Please enter your full name"
+msgstr "Please enter your full name"
+
+msgid "Please enter a valid phone number"
+msgstr "Please enter a valid phone number"
+
+msgid "Please enter a valid email address"
+msgstr "Please enter a valid email address"
+
+msgid "You must confirm that you are over 21 years old"
+msgstr "You must confirm that you are over 21 years old"
+
+msgid "Name must be at least 3 characters"
+msgstr "Name must be at least 3 characters"
+
+msgid "Phone number must be at least 10 digits"
+msgstr "Phone number must be at least 10 digits"
+
+msgid "No available cars matching this filter."
+msgstr "No available cars matching this filter."
+
+msgid "All Companies"
+msgstr "All Companies"
+
+
+# ── LOGIN ──────────────────────────────────────────────────────────────────────
+
+msgid "Please enter your email and password."
+msgstr "Please enter your email and password."
+
+msgid "Please enter your email."
+msgstr "Please enter your email."
+
+msgid "Please enter your password."
+msgstr "Please enter your password."
+
+msgid "Please enter a valid email address."
+msgstr "Please enter a valid email address."
+
+msgid "No account found with this email."
+msgstr "No account found with this email."
+
+msgid "Incorrect password. Please try again."
+msgstr "Incorrect password. Please try again."
+
+msgid "Your account has been deactivated."
+msgstr "Your account has been deactivated."
+
+# ── REGISTER ───────────────────────────────────────────────────────────────────
+
+msgid "Please fill in all fields."
+msgstr "Please fill in all fields."
+
+msgid "Please enter your full name."
+msgstr "Please enter your full name."
+
+msgid "Full name must be at least 7 characters."
+msgstr "Full name must be at least 7 characters."
+
+msgid "Please enter your phone number."
+msgstr "Please enter your phone number."
+
+msgid "Please enter a valid phone number."
+msgstr "Please enter a valid phone number."
+
+msgid "Phone number must be at least 10 digits."
+msgstr "Phone number must be at least 10 digits."
+
+msgid "Please enter a password."
+msgstr "Please enter a password."
+
+msgid "Password must be at least 8 characters."
+msgstr "Password must be at least 8 characters."
+
+msgid "Please confirm your password."
+msgstr "Please confirm your password."
+
+msgid "Passwords do not match."
+msgstr "Passwords do not match."
+
+msgid "An account with this email already exists."
+msgstr "An account with this email already exists."

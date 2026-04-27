@@ -1,0 +1,821 @@
+# SUPERRENTAL - Italian (Italiano) Translation - UPDATED
+# Copyright (C) 2026 SUPERRENTAL
+msgid ""
+msgstr ""
+"Project-Id-Version: SUPERRENTAL 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-30 14:00+0100\n"
+"PO-Revision-Date: 2026-01-30 14:00+0100\n"
+"Last-Translator: SUPERRENTAL Team\n"
+"Language-Team: Italian\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Navigation
+msgid "Home"
+msgstr "Home"
+
+msgid "Cars"
+msgstr "Auto"
+
+msgid "About Us"
+msgstr "Chi Siamo"
+
+msgid "Contact"
+msgstr "Contatti"
+
+msgid "Contact Us"
+msgstr "Contattaci"
+
+msgid "Account"
+msgstr "Accedi"
+
+msgid "Log In"
+msgstr "Accedi"
+
+msgid "Sign Up"
+msgstr "Registrati"
+
+msgid "Logout"
+msgstr "Esci"
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+# Hero Section
+msgid "Find Your Perfect Car Rental"
+msgstr "Trova il Tuo Noleggio Auto Perfetto"
+
+msgid "Affordable, reliable, and easy to book."
+msgstr "Conveniente, affidabile e facile da prenotare."
+
+msgid "Your browser does not support the video tag."
+msgstr "Il tuo browser non supporta il tag video."
+
+# Search Form
+msgid "Pick up location - Tirana"
+msgstr "Luogo di ritiro - Tirana"
+
+msgid "Drop off location - Tirana"
+msgstr "Di riconsegna - Tirana"
+
+msgid "Pick-up Location"
+msgstr "Luogo di Ritiro"
+
+msgid "Return Location"
+msgstr "Luogo di Riconsegna"
+
+msgid "Pick-up Date"
+msgstr "Data di Ritiro"
+
+msgid "Return Date"
+msgstr "Data di Riconsegna"
+
+msgid "Car Type"
+msgstr "Tipo di Auto"
+
+msgid "Select car type"
+msgstr "Seleziona tipo di auto"
+
+msgid "Select dates"
+msgstr "Seleziona date"
+
+msgid "Minimum 3 days"
+msgstr "Min 3 giorni"
+
+msgid "Search"
+msgstr "Cerca"
+
+msgid "Browse All Cars"
+msgstr "Sfoglia Tutte le Auto"
+
+# Car Types
+msgid "Economy"
+msgstr "Economy"
+
+msgid "Family"
+msgstr "Familiare"
+
+msgid "SUV"
+msgstr "SUV"
+
+msgid "Luxury"
+msgstr "Lusso"
+
+msgid "Sports"
+msgstr "Sportiva"
+
+msgid "Economy & City Cars"
+msgstr "Economy e Auto da Città"
+
+msgid "Family & Travel Cars"
+msgstr "Auto Familiari e da Viaggio"
+
+msgid "Luxury & Premium Cars"
+msgstr "Auto di Lusso e Premium"
+
+# Car Specifications
+msgid "Fuel Type"
+msgstr "Tipo di Carburante"
+
+msgid "Petrol"
+msgstr "Benzina"
+
+msgid "Diesel"
+msgstr "Diesel"
+
+msgid "Hybrid"
+msgstr "Ibrida"
+
+msgid "Electric"
+msgstr "Elettrica"
+
+msgid "Gearbox"
+msgstr "Cambio"
+
+msgid "Manual"
+msgstr "Manuale"
+
+msgid "Automatic"
+msgstr "Automatico"
+
+msgid "Seats"
+msgstr "Posti"
+
+msgid "Number of seats"
+msgstr "Numero di posti"
+
+msgid "Engine Power (HP)"
+msgstr "Potenza del Motore (CV)"
+
+msgid "Production Year"
+msgstr "Anno di Produzione"
+
+msgid "Car Brand"
+msgstr "Marca dell'Auto"
+
+# Pricing
+msgid "/ day"
+msgstr "/ giorno"
+
+msgid "/ per day"
+msgstr "/ al giorno"
+
+msgid "Price ($/day)"
+msgstr "Prezzo (€/giorno)"
+
+msgid "From $40/day"
+msgstr "Da 40€/giorno"
+
+msgid "Total Price"
+msgstr "Prezzo Totale"
+
+msgid "Days"
+msgstr "Giorni"
+
+msgid "day"
+msgstr "giorno"
+
+msgid "days"
+msgstr "giorni"
+
+msgid "Deposit"
+msgstr "Deposito"
+
+msgid "Minimum Rent"
+msgstr "Noleggio Minimo"
+
+msgid "Minimum Reservation"
+msgstr "Prenotazione Minima"
+
+# Filters & Sorting
+msgid "Filter"
+msgstr "Filtra"
+
+msgid "Reset"
+msgstr "Reimposta"
+
+msgid "Reset Filters"
+msgstr "Reimposta Filtri"
+
+msgid "Select"
+msgstr "Seleziona"
+
+msgid "Sort By"
+msgstr "Ordina Per"
+
+msgid "Price: Low to High"
+msgstr "Prezzo: Basso ad Alto"
+
+msgid "Price: High to Low"
+msgstr "Prezzo: Alto a Basso"
+
+msgid "Newest"
+msgstr "Più Recenti"
+
+msgid "Oldest"
+msgstr "Più Vecchi"
+
+msgid "Popularity"
+msgstr "Popolarità"
+
+# Car Listings
+msgid "Available Cars"
+msgstr "Auto Disponibili"
+
+msgid "Cars Available"
+msgstr "Auto Disponibili"
+
+msgid "No cars found"
+msgstr "Nessuna auto trovata"
+
+msgid "No available cars matching this filter"
+msgstr "Nessuna auto disponibile corrispondente a questo filtro"
+
+msgid "Try adjusting or resetting your filters to see more cars."
+msgstr "Prova a modificare o reimpostare i filtri per vedere più auto."
+
+msgid "View Details"
+msgstr "Vedi Dettagli"
+
+msgid "Details"
+msgstr "Dettagli"
+
+msgid "Book Now"
+msgstr "Prenota Ora"
+
+msgid "Book This Car"
+msgstr "Prenota Quest'Auto"
+
+msgid "Book"
+msgstr "Prenota"
+
+# Car Details
+msgid "Description"
+msgstr "Descrizione"
+
+msgid "is a premium vehicle offering comfort, performance and reliability. Perfect for travel and city experience."
+msgstr "è un veicolo premium che offre comfort, prestazioni e affidabilità. Perfetto per viaggi ed esperienza cittadina."
+
+msgid "Insurance"
+msgstr "Assicurazione"
+
+msgid "This car includes full insurance and roadside assistance."
+msgstr "Questa auto include assicurazione completa e assistenza stradale."
+
+msgid "Prices Table"
+msgstr "Tabella Prezzi"
+
+msgid "Insurance Included"
+msgstr "Assicurazione Inclusa"
+
+# Booking
+msgid "Complete Your Booking"
+msgstr "Completa la Tua Prenotazione"
+
+msgid "Confirm"
+msgstr "Conferma"
+
+msgid "Cancel"
+msgstr "Annulla"
+
+msgid "Full Name"
+msgstr "Nome Completo"
+
+msgid "Your Name"
+msgstr "Il Tuo Nome"
+
+msgid "Email Address"
+msgstr "Indirizzo Email"
+
+msgid "Your Email"
+msgstr "La Tua Email"
+
+msgid "Phone Number"
+msgstr "Numero di Telefono"
+
+msgid "Leave a note (optional)"
+msgstr "Lascia una nota (opzionale)"
+
+msgid "Optional"
+msgstr "Opzionale"
+
+# Features & Benefits
+msgid "Why Choose Us?"
+msgstr "Perché Sceglierci?"
+
+msgid "No Hidden Fees"
+msgstr "Nessuna Tariffa Nascosta"
+
+msgid "Transparent pricing with no surprises."
+msgstr "Prezzi trasparenti senza sorprese."
+
+msgid "Drive with confidence, insurance is always included."
+msgstr "Guida con fiducia, l'assicurazione è sempre inclusa."
+
+msgid "24/7 Support"
+msgstr "Supporto 24/7"
+
+msgid "We are always available whenever you need us."
+msgstr "Siamo sempre disponibili quando hai bisogno di noi."
+
+msgid "New & Clean Cars"
+msgstr "Auto Nuove e Pulite"
+
+msgid "Modern, well-maintained, and spotless vehicles."
+msgstr "Veicoli moderni, ben mantenuti e immacolati."
+
+msgid "Economical"
+msgstr "Economico"
+
+msgid "Find the best deals that fit your budget."
+msgstr "Trova le migliori offerte adatte al tuo budget."
+
+msgid "Reliable"
+msgstr "Affidabile"
+
+msgid "All vehicles are regularly inspected and maintained."
+msgstr "Tutti i veicoli sono regolarmente ispezionati e mantenuti."
+
+msgid "Easy"
+msgstr "Facile"
+
+msgid "Easy Booking"
+msgstr "Prenotazione Facile"
+
+msgid "Fast booking process with instant confirmation."
+msgstr "Processo di prenotazione rapido con conferma istantanea."
+
+msgid "Choose your location, dates, and car type."
+msgstr "Scegli la tua posizione, date e tipo di auto."
+
+# Offers & Promotions
+msgid "Weekly Offers"
+msgstr "Offerte Settimanali"
+
+msgid "Save up to 25%% on selected cars! Book now before offers expire."
+msgstr "Risparmia fino al 25%% su auto selezionate! Prenota ora prima che le offerte scadano."
+
+msgid "View Offers"
+msgstr "Vedi Offerte"
+
+# Testimonials
+msgid "What our clients say"
+msgstr "Cosa Dicono i Nostri Clienti"
+
+msgid "Excellent service, easy booking and reliable cars!"
+msgstr "Servizio eccellente, prenotazione facile e auto affidabili!"
+
+msgid "Great prices and very clean vehicles."
+msgstr "Ottimi prezzi e veicoli molto puliti."
+
+msgid "Fast booking and excellent support."
+msgstr "Prenotazione veloce e supporto eccellente."
+
+msgid "Very professional and transparent service."
+msgstr "Servizio molto professionale e trasparente."
+
+msgid "Easy pickup and return process."
+msgstr "Procedura di ritiro e riconsegna semplice."
+
+msgid "Best rental platform I've used so far."
+msgstr "La migliore piattaforma di noleggio che abbia mai usato."
+
+# Statistics
+msgid "Our Achievements"
+msgstr "I Nostri Successi"
+
+msgid "Happy Clients"
+msgstr "Clienti Soddisfatti"
+
+msgid "Years Experience"
+msgstr "Anni di Esperienza"
+
+msgid "Partners"
+msgstr "Partner"
+
+msgid "Our Partners"
+msgstr "I Nostri Partner"
+
+msgid "Cities Covered"
+msgstr "Città Coperte"
+
+# About Us
+msgid "About FastCar Rentals"
+msgstr "Informazioni su FastCar Rentals"
+
+msgid "At FastCar Rentals, we believe in making your travel experiences seamless, luxurious, and unforgettable. With a wide selection of premium vehicles, competitive pricing, and top-notch customer service, we are here to drive your adventures forward."
+msgstr "A FastCar Rentals, crediamo nel rendere le tue esperienze di viaggio fluide, lussuose e indimenticabili. Con un'ampia selezione di veicoli premium, prezzi competitivi e un servizio clienti di prim'ordine, siamo qui per guidare le tue avventure."
+
+msgid "A Growing Rental Marketplace"
+msgstr "Un Mercato di Noleggio in Crescita"
+
+msgid "By partnering with verified rental companies, we ensure that every vehicle listed on our platform meets quality and safety standards."
+msgstr "Collaborando con compagnie di noleggio verificate, assicuriamo che ogni veicolo elencato sulla nostra piattaforma soddisfi gli standard di qualità e sicurezza."
+
+msgid "All rental companies on FastCar Rentals are carefully verified. Vehicles are inspected regularly, and pricing is always shown clearly before booking."
+msgstr "Tutte le compagnie di noleggio su FastCar Rentals sono attentamente verificate. I veicoli sono ispezionati regolarmente e i prezzi sono sempre mostrati chiaramente prima della prenotazione."
+
+msgid "Cars for Every Journey"
+msgstr "Auto per Ogni Viaggio"
+
+msgid "Affordable and efficient vehicles for everyday driving."
+msgstr "Veicoli convenienti ed efficienti per la guida quotidiana."
+
+# Contact
+msgid "Have questions or want to book a car? Get in touch with us!"
+msgstr "Hai domande o vuoi prenotare un'auto? Contattaci!"
+
+msgid "Subject"
+msgstr "Oggetto"
+
+msgid "Message"
+msgstr "Messaggio"
+
+msgid "Your Message"
+msgstr "Il Tuo Messaggio"
+
+msgid "Send Message"
+msgstr "Invia Messaggio"
+
+# Call to Action
+msgid "Ready to Drive?"
+msgstr "Pronto a Guidare?"
+
+msgid "Book your car now and hit the road in minutes."
+msgstr "Prenota la tua auto ora e parti in pochi minuti."
+
+# Authentication
+msgid "Sign in to your account"
+msgstr "Accedi al tuo accedi"
+
+msgid "Don't have an account?"
+msgstr "Non hai un accedi?"
+
+msgid "Already have an account?"
+msgstr "Hai già un accedi?"
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Confirm Password"
+msgstr "Conferma Password"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Remember me"
+msgstr "Ricordami"
+
+msgid "Forgot password?"
+msgstr "Password dimenticata?"
+
+# Footer
+msgid "Pages"
+msgstr "Pagine"
+
+msgid "Follow Us"
+msgstr "Seguici"
+
+msgid "All Rights Reserved"
+msgstr "Tutti i Diritti Riservati"
+
+# Dashboard
+msgid "My Bookings"
+msgstr "Le Mie Prenotazioni"
+
+msgid "My Cars"
+msgstr "Le Mie Auto"
+
+msgid "Add Car"
+msgstr "Aggiungi Auto"
+
+msgid "Edit Car"
+msgstr "Modifica Auto"
+
+msgid "Company Profile"
+msgstr "Profilo Aziendale"
+
+msgid "Settings"
+msgstr "Impostazioni"
+
+# Compare
+msgid "Compare"
+msgstr "Confronta"
+
+msgid "Close"
+msgstr "Chiudi"
+
+# Common Actions
+msgid "Save"
+msgstr "Salva"
+
+msgid "Edit"
+msgstr "Modifica"
+
+msgid "Delete"
+msgstr "Elimina"
+
+msgid "Submit"
+msgstr "Invia"
+
+msgid "Back"
+msgstr "Indietro"
+
+msgid "Next"
+msgstr "Avanti"
+
+msgid "Previous"
+msgstr "Precedente"
+
+msgid "Loading..."
+msgstr "Caricamento..."
+
+msgid "Please wait..."
+msgstr "Attendere prego..."
+
+# Status Messages
+msgid "Success!"
+msgstr "Successo!"
+
+msgid "Error!"
+msgstr "Errore!"
+
+msgid "Warning!"
+msgstr "Attenzione!"
+
+msgid "Info"
+msgstr "Informazione"
+
+# Validation
+msgid "This field is required"
+msgstr "Questo campo è obbligatorio"
+
+msgid "Invalid email address"
+msgstr "Indirizzo email non valido"
+
+msgid "Password too short"
+msgstr "Password troppo corta"
+
+msgid "Passwords do not match"
+msgstr "Le password non corrispondono"
+
+msgid "Search Booking"
+msgstr "Cerca Prenotazione"
+
+msgid "Please enter your booking reference"
+msgstr "Inserisci il riferimento della prenotazione"
+
+msgid "Please enter your full name"
+msgstr "Inserisci il tuo nome completo"
+
+msgid "Find Your Booking"
+msgstr "Trova la tua prenotazione"
+
+msgid "We offer high quality rental cars. Book now and enjoy your ride!"
+msgstr "Offriamo auto a noleggio di alta qualità. Prenota ora e goditi il viaggio!"
+
+msgid "Find My Booking"
+msgstr "Trova la mia prenotazione"
+
+msgid "Your full name"
+msgstr "Il tuo nome completo"
+
+msgid "Booking Reference"
+msgstr "Riferimento Prenotazione"
+
+msgid "From"
+msgstr "Da"
+
+msgid "Register"
+msgstr "Registrati"
+
+msgid "Create an Account"
+msgstr "Crea un accedi"
+
+msgid "Enter your full name"
+msgstr "Inserisci il tuo nome completo"
+
+msgid "Enter your email"
+msgstr "Inserisci la tua email"
+
+msgid "Enter your phone number"
+msgstr "Inserisci il tuo numero di telefono"
+
+msgid "Type your password"
+msgstr "Inserisci la tua password"
+
+msgid "Repeat your password"
+msgstr "Ripeti la tua password"
+
+msgid "Reference"
+msgstr "Riferimento"
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Car"
+msgstr "Auto"
+
+msgid "To"
+msgstr "A"
+
+msgid "to"
+msgstr "al"
+
+msgid "Status"
+msgstr "Stato"
+
+msgid "Search Another Booking"
+msgstr "Cerca un'altra prenotazione"
+
+msgid "Booking Found"
+msgstr "Prenotazione trovata"
+
+msgid "Message Sent Successfully"
+msgstr "Messaggio inviato con successo"
+
+msgid "Thank you for contacting us!"
+msgstr "Grazie per averci contattato!"
+
+msgid "We have received your message and will get back to you shortly."
+msgstr "Abbiamo ricevuto il tuo messaggio e ti risponderemo a breve."
+
+msgid "I confirm that I am over 21 years old to drive this car"
+msgstr "Confermo di avere più di 21 anni per guidare questa auto"
+
+msgid "Minimum %(days)s days required"
+msgstr "Sono richiesti almeno %(days)s giorni"
+
+msgid "FastCar Rentals is a modern car rental marketplace that brings together trusted rental companies and hundreds of vehicles into one simple, transparent, and secure booking platform."
+msgstr "FastCar Rentals è una piattaforma moderna di noleggio auto che riunisce aziende affidabili e centinaia di veicoli in un unico sistema di prenotazione semplice, trasparente e sicuro."
+
+msgid "Rental Companies"
+msgstr "Aziende di noleggio"
+
+msgid "Successful Bookings"
+msgstr "Prenotazioni riuscite"
+
+msgid "Spacious and comfortable cars for families and long trips."
+msgstr "Auto spaziose e confortevoli per famiglie e viaggi lunghi."
+
+msgid "High-end cars for business travel and special occasions."
+msgstr "Auto di lusso per viaggi di lavoro e occasioni speciali."
+
+msgid "Our platform is designed to protect customer data and ensure secure payments at every step."
+msgstr "La nostra piattaforma è progettata per proteggere i dati dei clienti e garantire pagamenti sicuri in ogni fase."
+
+msgid "Trust & Transparency"
+msgstr "Affidabilità e Trasparenza"
+
+msgid "View offers from multiple rental companies."
+msgstr "Visualizza offerte da più aziende di noleggio."
+
+msgid "Reserve your car with transparent pricing and instant confirmation."
+msgstr "Prenota la tua auto con prezzi trasparenti e conferma immediata."
+
+msgid "How It Works"
+msgstr "Come Funziona"
+
+msgid "Family Cars & SUVs"
+msgstr "Auto familiari e SUV"
+
+msgid "Our Mission"
+msgstr "La Nostra Missione"
+
+msgid "Luxury & Premium Vehicles"
+msgstr "Veicoli di Lusso e Premium"
+
+msgid "Our mission is to make car rental simple, reliable, and accessible. We believe customers should be able to compare cars, prices, and rental companies easily, without hidden fees or complicated processes."
+msgstr "La nostra missione è rendere il noleggio auto semplice, affidabile e accessibile. Crediamo che i clienti debbano poter confrontare facilmente auto, prezzi e aziende di noleggio, senza costi nascosti o processi complicati."
+
+msgid "No booking found with the provided details"
+msgstr "Nessuna prenotazione trovata con i dettagli forniti"
+
+msgid "Showing available cars from {{ start }} to {{ end }} from {{ company }}"
+msgstr "Auto disponibili dal {{ start }} al {{ end }} da {{ company }}"
+
+msgid "Showing available cars from {{ start }} to {{ end }}"
+msgstr "Auto disponibili dal {{ start }} al {{ end }}"
+
+msgid "Showing cars of type {{ type }} from {{ company }}"
+msgstr "Auto di tipo {{ type }} da {{ company }}"
+
+msgid "Showing cars from {{ company }}"
+msgstr "Auto da {{ company }}"
+
+msgid "Showing cars of type {{ type }}"
+msgstr "Auto di tipo {{ type }}"
+
+msgid "Showing filtered results"
+msgstr "Risultati filtrati"
+
+msgid "Please select the dates"
+msgstr "Si prega di selezionare le date"
+
+msgid "Minimum"
+msgstr "Minimo"
+
+msgid "days required"
+msgstr "giorni richiesti"
+
+msgid "Confirm Booking"
+msgstr "Conferma Prenotazione"
+
+msgid "Available"
+msgstr "Disponibile"
+
+msgid "Unavailable"
+msgstr "Non disponibile"
+
+msgid "Select return date"
+msgstr "Seleziona data di ritorno"
+
+msgid "Checking availability..."
+msgstr "Verifica disponibilità..."
+
+msgid "Select dates to check availability"
+msgstr "Seleziona le date per verificare la disponibilità"
+
+msgid "Error checking availability"
+msgstr "Errore nel controllo della disponibilità"
+
+msgid "Please enter a valid phone number"
+msgstr "Per favore inserisci un numero di telefono valido"
+
+msgid "Please enter a valid email address"
+msgstr "Per favore inserisci un indirizzo email valido"
+
+msgid "You must confirm that you are over 21 years old"
+msgstr "Devi confermare di avere più di 21 anni"
+
+msgid "Name must be at least 3 characters"
+msgstr "Il nome deve essere di almeno 3 caratteri"
+
+msgid "Phone number must be at least 10 digits"
+msgstr "Il numero di telefono deve avere almeno 10 cifre"
+
+msgid "No available cars matching this filter."
+msgstr "Nessuna auto disponibile corrispondente a questo filtro."
+
+msgid "All Companies"
+msgstr "Tutte le Compagnie"
+
+msgid "Please enter your email and password."
+msgstr "Inserisci la tua email e la tua password."
+
+msgid "Please enter your email."
+msgstr "Inserisci la tua email."
+
+msgid "Please enter your password."
+msgstr "Inserisci la tua password."
+
+msgid "Please enter a valid email address."
+msgstr "Inserisci un indirizzo email valido."
+
+msgid "No account found with this email."
+msgstr "Nessun account trovato con questa email."
+
+msgid "Incorrect password. Please try again."
+msgstr "Password errata. Riprova."
+
+msgid "Your account has been deactivated."
+msgstr "Il tuo account è stato disattivato."
+
+# ── REGISTER ───────────────────────────────────────────────────────────────────
+
+msgid "Please fill in all fields."
+msgstr "Compila tutti i campi."
+
+msgid "Please enter your full name."
+msgstr "Inserisci il tuo nome completo."
+
+msgid "Full name must be at least 7 characters."
+msgstr "Il nome completo deve essere di almeno 7 caratteri."
+
+msgid "Please enter your phone number."
+msgstr "Inserisci il tuo numero di telefono."
+
+msgid "Please enter a valid phone number."
+msgstr "Inserisci un numero di telefono valido."
+
+msgid "Phone number must be at least 10 digits."
+msgstr "Il numero di telefono deve avere almeno 10 cifre."
+
+msgid "Please enter a password."
+msgstr "Inserisci una password."
+
+msgid "Password must be at least 8 characters."
+msgstr "La password deve essere di almeno 8 caratteri."
+
+msgid "Please confirm your password."
+msgstr "Conferma la tua password."
+
+msgid "Passwords do not match."
+msgstr "Le password non corrispondono."
+
+msgid "An account with this email already exists."
+msgstr "Esiste già un account con questa email."

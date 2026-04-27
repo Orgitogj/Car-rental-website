@@ -1,0 +1,96 @@
+{% load static i18n %}
+ <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+{% if cars %}
+  <div class="row g-4 cars-container">
+    {% for car in cars %}
+      <div class="col-md-4">
+
+        <div class="card h-100 shadow-sm">
+
+          {% if car.images.first %}
+            <img src="{{ car.images.first.image.url }}" class="card-img-top">
+          {% else %}
+            <img src="{% static 'img/default-car.jpg' %}" class="card-img-top">
+          {% endif %}
+
+          <div class="card-body">
+
+          <div class="d-flex justify-content-between align-items-center mb-2">
+
+  <h5 class="mb-0 fw-bold">
+    {{ car.name }}
+  </h5>
+
+  <!-- Info per kompanine-->
+  <div class="d-flex align-items-center gap-2 company-inline">
+    {% if car.company.logo %}
+      <img src="{{ car.company.logo.url }}"
+           alt="{{ car.company.name }}"
+           class="company-logo-inline">
+    {% endif %}
+    <span class="company-name-inline">
+      {{ car.company.name }}
+    </span>
+  </div>
+
+</div>
+
+            <h6 class="text-primary">
+              €{{ car.price_per_day }}
+              <small>{% trans "/ day" %}</small>
+            </h6>
+
+            <div class="d-flex justify-content-between text-center small text-muted border-top pt-3">
+
+              <div>
+                <i class="bi bi-speedometer2"></i>
+                <div>{{ car.engine_size }} </div>
+              </div>
+
+              <div>
+                <i class="bi bi-people"></i>
+                <div>{{ car.seats }} {% trans "Seats" %}</div>
+              </div>
+
+              <div>
+                <i class="bi bi-calendar"></i>
+                <div>{{ car.year }}</div>
+              </div>
+
+              <div>
+                <i class="bi bi-gear"></i>
+                <div>{{ car.get_gear_display }}</div>
+              </div>
+
+              <div>
+                <i class="bi bi-fuel-pump"></i>
+                <div>{{ car.get_fuel_display }}</div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="card-footer bg-white border-0 d-grid">
+            <a href="{% url 'car_details' car.id %}"
+               class="btn btn-primary">
+              {% trans "View Details" %}
+            </a>
+          </div>
+
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+{% else %}
+  <div class="text-center mt-5">
+    <p class="text-muted mb-4">
+      {% trans "No available cars matching this filter." %}
+    </p>
+
+    <a href="{% url 'cars' %}"
+       class="btn btn-primary btn-lg">
+      {% trans "Reset Filters" %}
+    </a>
+  </div>
+{% endif %}

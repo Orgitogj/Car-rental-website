@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block content %}
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 90vh;">
+  <div class="card shadow p-4 register-card" style="width: 600px;">
+
+    <h3 class="text-center mb-4">{% trans "Create an Account" %}</h3>
+
+    {% if messages %}
+      {% for message in messages %}
+        <div class="register-error-box">
+          <i class="bi bi-exclamation-triangle-fill"></i>
+          <span>{{ message }}</span>
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    <form method="POST" action="{% url 'register' %}" autocomplete="off">
+      {% csrf_token %}
+
+      <div class="mb-3">
+        <label class="form-label">{% trans "Full Name" %}</label>
+        <input type="text"
+               name="full_name"
+               value="{{ full_name|default:'' }}"
+               class="form-control {% if messages %}{% for m in messages %}{% if 'name' in m.message|lower %}is-invalid{% endif %}{% endfor %}{% endif %}"
+               placeholder="{% trans 'Enter your full name' %}"
+               autocomplete="off">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">{% trans "Email" %}</label>
+        <input type="email"
+               name="email"
+               value="{{ email|default:'' }}"
+               class="form-control {% if messages %}{% for m in messages %}{% if 'email' in m.message|lower %}is-invalid{% endif %}{% endfor %}{% endif %}"
+               placeholder="{% trans 'Enter your email' %}"
+               autocomplete="off">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">{% trans "Phone Number" %}</label>
+        <input type="text"
+               name="phone"
+               value="{{ phone|default:'' }}"
+               class="form-control {% if messages %}{% for m in messages %}{% if 'phone' in m.message|lower %}is-invalid{% endif %}{% endfor %}{% endif %}"
+               placeholder="{% trans 'Enter your phone number' %}"
+               autocomplete="off">
+      </div>
+
+      <div class="mb-3 position-relative">
+        <label class="form-label">{% trans "Password" %}</label>
+        <input type="password"
+               name="password1"
+               id="password1"
+               class="form-control {% if messages %}{% for m in messages %}{% if 'password' in m.message|lower %}is-invalid{% endif %}{% endfor %}{% endif %}"
+               placeholder="{% trans 'Type your password' %}"
+               autocomplete="new-password">
+        <span class="password-toggle" onclick="togglePass('password1', 'icon1')">
+          <i class="bi bi-eye" id="icon1"></i>
+        </span>
+      </div>
+
+      <div class="mb-3 position-relative">
+        <label class="form-label">{% trans "Confirm Password" %}</label>
+        <input type="password"
+               name="password2"
+               id="password2"
+               class="form-control {% if messages %}{% for m in messages %}{% if 'match' in m.message|lower or 'confirm' in m.message|lower %}is-invalid{% endif %}{% endfor %}{% endif %}"
+               placeholder="{% trans 'Repeat your password' %}"
+               autocomplete="new-password">
+        <span class="password-toggle" onclick="togglePass('password2', 'icon2')">
+          <i class="bi bi-eye" id="icon2"></i>
+        </span>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">
+        {% trans "Register" %}
+      </button>
+
+      <div class="text-center mt-3">
+        <p>
+          {% trans "Already have an account?" %}
+          <a href="{% url 'login' %}">{% trans "Log in" %}</a>
+        </p>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<script>
+function togglePass(inputId, iconId) {
+  const input = document.getElementById(inputId);
+  const icon = document.getElementById(iconId);
+  if (input.type === "password") {
+    input.type = "text";
+    icon.classList.replace("bi-eye", "bi-eye-slash");
+  } else {
+    input.type = "password";
+    icon.classList.replace("bi-eye-slash", "bi-eye");
+  }
+}
+const rules = {
+  full_name: value => {
+    if (!value) return "Please enter your full name.";
+    if (value.length < 3) return "Full name must be at least 3 characters.";
+    return null;
+  },
+  email: value => {
+    if (!value) return "Please enter your email.";
+    if (!value.includes("@") || !value.includes(".")) return "Please enter a valid email address.";
+    return null;
+  },
+  phone: value => {
+    if (!value) return "Please enter your phone number.";
+    if (!/^[\d\s\+\-\(\)]+$/.test(value)) return "Please enter a valid phone number.";
+    if (value.replace(/\D/g, "").length < 10) return "Phone number must be at least 10 digits.";
+    return null;
+  },
+  password1: value => {
+    if (!value) return "Please enter a password.";
+    if (value.length < 8) return "Password must be at least 8 characters.";
+    return null;
+  },
+  password2: value => {
+    const p1 = document.getElementById("password1").value;
+    if (!value) return "Please confirm your password.";
+    if (value !== p1) return "Passwords do not match.";
+    return null;
+  }
+};
+
+function validateField(input) {
+  const rule = rules[input.name];
+  if (!rule) return;
+
+  const error = rule(input.value.trim());
+
+  if (error) {
+    input.classList.add("is-invalid");
+    input.classList.remove("is-valid");
+  } else {
+    input.classList.remove("is-invalid");
+    input.classList.add("is-valid");
+  }
+}
+
+document.querySelectorAll(".register-card .form-control").forEach(input => {
+  input.addEventListener("input", () => validateField(input));
+  input.addEventListener("blur", () => validateField(input));
+});
+</script>
+
+{% endblock %}

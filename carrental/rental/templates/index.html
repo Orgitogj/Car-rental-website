@@ -1,0 +1,413 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}Car Rental | Home{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<header class="hero position-relative text-center text-white d-flex align-items-center justify-content-center">
+  <video autoplay muted loop playsinline class="w-100 h-100 position-absolute top-0 start-0 object-fit-cover">
+    <source src="../static/video/hero-video.mp4" type="video/mp4">
+    {% trans "Your browser does not support the video tag." %}
+  </video>
+
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.5);"></div>
+
+  <!-- Hero Content -->
+  <div class="container position-relative z-3">
+    <h1 class="display-4 fw-bold mb-3">
+      {% trans "Find Your Perfect Car Rental" %}
+    </h1>
+
+    <p class="lead mb-4">
+      {% trans "Affordable, reliable, and easy to book." %}
+    </p>
+<div class="container">
+<form id="searchForm" class=" mb-3">
+
+  <div class="row g-3">
+
+    <div class="col-12 col-md-3">
+      <div class="d-flex flex-column gap-3">
+        <input
+          type="text"
+          class="form-control"
+          value="{% trans 'Pick up location - Tirana' %}"
+          readonly>
+
+        <input
+          type="text"
+          class="form-control"
+          value="{% trans 'Drop off location - Tirana' %}"
+          readonly>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-3">
+      <div class="d-flex flex-column gap-3">
+        <input
+          type="date"
+          id="startDate"
+          name="startDate"
+          class="form-control"
+          placeholder="{% trans 'Start Date' %}">
+
+        <input
+          type="date"
+          id="endDate"
+          name="endDate"
+          class="form-control"
+          placeholder="{% trans 'End Date' %}">
+      </div>
+    </div>
+
+    <div class="col-12 col-md-3">
+      <div class="d-flex flex-column gap-3">
+        <select id="carType" name="carType" class="form-select">
+          <option value="">{% trans "Car Type" %}</option>
+          <option value="economy">{% trans "Economy" %}</option>
+          <option value="family">{% trans "Family" %}</option>
+          <option value="suv">{% trans "SUV" %}</option>
+          <option value="luxury">{% trans "Luxury" %}</option>
+          <option value="sports">{% trans "Sports" %}</option>
+        </select>
+
+        <select id="companySelect" name="company" class="form-select">
+          <option value="">{% trans "All Companies" %}</option>
+          {% for company in companies %}
+            <option value="{{ company.id }}">{{ company.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-12 d-flex justify-content-center gap-3">
+      <button
+        type="submit"
+        id="applyFilterBtn"
+        class="btn btn-primary btn-lg px-5">
+        {% trans "Search" %}
+      </button>
+
+      <button
+        type="button"
+        id="resetSearchBtn"
+        class="btn btn-primary btn-lg px-5">
+        {% trans "Reset" %}
+      </button>
+    </div>
+  </div>
+
+  <div class="row mt-2">
+    <div class="col-12 text-center">
+      <a href="{% url 'cars' %}" class="btn btn-primary btn-lg px-5  btn-hover-bold">
+        {% trans "Browse All Cars" %}
+      </a>
+    </div>
+  </div>
+
+</form>
+</div>
+</header>
+
+<!-- PSE NE? -->
+<section class="lux-section why-choose-us">
+  <div class="container">
+
+    <h2 class="text-center mb-5">
+      {% trans "Why Choose Us?" %}
+    </h2>
+
+    <div class="row g-4 justify-content-center">
+
+      <div class="col-md-4 col-sm-6">
+        <div class="why-box text-center">
+          <i class="bi bi-shield-check"></i>
+          <h5>{% trans "No Hidden Fees" %}</h5>
+          <p>{% trans "Transparent pricing with no surprises." %}</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="why-box text-center">
+          <i class="bi bi-file-earmark-check"></i>
+          <h5>{% trans "Insurance Included" %}</h5>
+          <p>{% trans "Drive with confidence, insurance is always included." %}</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="why-box text-center">
+          <i class="bi bi-car-front-fill"></i>
+          <h5>{% trans "New & Clean Cars" %}</h5>
+          <p>{% trans "Modern, well-maintained, and spotless vehicles." %}</p>
+          <p>{% trans "All vehicles are regularly inspected and maintained." %}</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="why-box text-center">
+          <i class="bi bi-headset"></i>
+          <h5>{% trans "24/7 Support" %}</h5>
+          <p>{% trans "We are always available whenever you need us." %}</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="why-box text-center">
+          <i class="bi bi-cash-coin"></i>
+          <h5>{% trans "Economical" %}</h5>
+          <p>{% trans "Find the best deals that fit your budget." %}</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="why-box text-center">
+          <i class="bi bi-lightning-charge-fill"></i>
+          <h5>{% trans "Easy Booking" %}</h5>
+          <p>{% trans "Fast booking process with instant confirmation." %}</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="py-5 featured-section">
+  <div class="container text-center">
+
+    <h2 class="mb-4">
+      {% trans "Weekly Offers" %}
+    </h2>
+
+    <div class="row g-4">
+
+      {% for car in featured_cars %}
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm position-relative">
+
+    <span class="discount-badge">20% OFF</span>
+          {% if car.main_image %}
+  <img src="{{ car.main_image.url }}"
+       class="card-img-top"
+       alt="{{ car.name }}">
+{% endif %}
+
+
+          <div class="card-body">
+            <h5 class="card-title">{{ car.name }}</h5>
+
+            <p class="card-text">
+  {% trans "From" %} ${{ car.price_per_day }} {% trans "/ day" %}
+</p>
+
+            <a href="{% url 'car_details' car.id %}"
+               class="btn btn-primary">
+              {% trans "Book Now" %}
+            </a>
+
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+
+<!-- FEEDBACK -->
+<section class="py-5 premium-section position-relative">
+  <div class="container position-relative">
+
+    <h2 class="mb-5 text-center">
+      {% trans "What our clients say" %}
+    </h2>
+
+    <!-- CAROUSEL -->
+    <div id="testimonialCarousel" class="carousel slide position-relative" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- SLIDE 1 -->
+        <div class="carousel-item active">
+          <div class="row g-4">
+
+            <div class="col-md-4">
+              <div class="card p-4 shadow-sm h-100 text-center">
+                <div class="text-warning mb-2">★★★★★</div>
+                <p>{% trans "Excellent service, easy booking and reliable cars!" %}</p>
+                <h6 class="fw-bold mb-0">Altin Kodra</h6>
+                <small class="text-muted">Tirana</small>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card p-4 shadow-sm h-100 text-center">
+                <div class="text-warning mb-2">★★★★☆</div>
+                <p>{% trans "Great prices and very clean vehicles." %}</p>
+                <h6 class="fw-bold mb-0">Anna Smith</h6>
+                <small class="text-muted">USA</small>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card p-4 shadow-sm h-100 text-center">
+                <div class="text-warning mb-2">★★★★★</div>
+                <p>{% trans "Fast booking and excellent support." %}</p>
+                <h6 class="fw-bold mb-0">Antonela  Bastoni </h6>
+                <small class="text-muted">Milan</small>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="carousel-item">
+          <div class="row g-4">
+
+            <div class="col-md-4">
+              <div class="card p-4 shadow-sm h-100 text-center">
+                <div class="text-warning mb-2">★★★★★</div>
+                <p>{% trans "Very professional and transparent service." %}</p>
+                <h6 class="fw-bold mb-0">Federico Di Marco</h6>
+                <small class="text-muted">Florence</small>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card p-4 shadow-sm h-100 text-center">
+                <div class="text-warning mb-2">★★★★☆</div>
+                <p>{% trans "Easy pickup and return process." %}</p>
+                <h6 class="fw-bold mb-0">Ryan Smith</h6>
+                <small class="text-muted">London</small>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card p-4 shadow-sm h-100 text-center">
+                <div class="text-warning mb-2">★★★★★</div>
+                <p>{% trans "Best rental platform I’ve used so far." %}</p>
+                <h6 class="fw-bold mb-0">Albert Müller</h6>
+                <small class="text-muted">Berlin</small>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CONTROLS  for carusels-->
+      <button class="carousel-control-prev"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button class="carousel-control-next"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Partners -->
+<section class="py-5 partners-section premium-section">
+  <div class="container text-center partners">
+
+    <h2 class="mb-4">
+      {% trans "Our Partners" %}
+    </h2>
+
+   <div class="d-flex justify-content-center align-items-center flex-wrap">
+  <img src="{% static 'foto/partneri1.png' %}" alt="Partner 1 Logo" class="partner-logo">
+  <img src="{% static 'foto/partneri2.png' %}" alt="Partner 2 Logo" class="partner-logo">
+  <img src="{% static 'foto/partneri3.webp' %}" alt="Partner 3 Logo" class="partner-logo">
+</div>
+
+
+  </div>
+</section>
+
+
+<!-- Achievements -->
+<section class="py-5 text-center stats premium-section">
+  <div class="container">
+
+    <h2 class="mb-4">
+      {% trans "Our Achievements" %}
+    </h2>
+
+    <div class="row g-4">
+      <div class="col-md-3">
+        <h3>500+</h3>
+        <p>
+          {% trans "Cars Available" %}
+        </p>
+      </div>
+
+      <div class="col-md-3">
+        <h3>2000+</h3>
+        <p>
+          {% trans "Happy Clients" %}
+        </p>
+      </div>
+
+      <div class="col-md-3">
+        <h3>10+</h3>
+        <p>
+          {% trans "Years Experience" %}
+        </p>
+      </div>
+
+      <div class="col-md-3">
+        <h3>50+</h3>
+        <p>
+          {% trans "Partners" %}
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA IMAGE SECTION -->
+<section class="cta-image">
+
+  <div class="cta-overlay"></div>
+
+  <div class="container text-center cta-content">
+
+    <div class="cta-icon pulse">
+      <i class="bi bi-lightning-fill"></i>
+    </div>
+
+    <h2>
+      {% trans "Ready to Drive?" %}
+    </h2>
+
+    <p>
+      {% trans "Book your car now and hit the road in minutes." %}
+    </p>
+
+    <a href="{% url 'cars' %}" class="btn cta-btn-big">
+      <i class="bi bi-search me-2"></i>
+      {% trans "Book Now" %}
+    </a>
+
+  </div>
+
+</section>
+
+{% endblock %}

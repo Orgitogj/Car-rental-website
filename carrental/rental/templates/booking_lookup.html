@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+
+<div class="container d-flex justify-content-center align-items-center"
+     style="min-height: 90vh; max-width:520px">
+
+  <div class="login-card p-4 w-100">
+
+    <h2 class="text-center mb-4 text-white">
+      {% trans "Find Your Booking" %}
+    </h2>
+
+    {% if not booking and not error %}
+    <form method="POST" onsubmit="return validateLookupForm();">
+      {% csrf_token %}
+
+      <div class="mb-3">
+        <label class="form-label">
+          {% trans "Full Name" %}
+        </label>
+        <input type="text"
+               id="fullName"
+               name="full_name"
+               class="form-control"
+               placeholder="{% trans 'Your full name' %}">
+        <div class="field-error" id="fullNameError">
+          {% trans "Please enter your full name" %}
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">
+          {% trans "Booking Reference" %}
+        </label>
+        <input type="text"
+               id="reference"
+               name="reference"
+               class="form-control"
+               placeholder="{% trans 'CR-XXXXXXX' %}">
+        <div class="field-error" id="referenceError">
+          {% trans "Please enter your booking reference" %}
+        </div>
+      </div>
+
+      <button class="btn w-100">
+        {% trans "Search Booking" %}
+      </button>
+    </form>
+    {% endif %}
+
+    {% if error %}
+      <div class="login-error-box mt-3">
+        <i class="bi bi-exclamation-triangle-fill"></i>
+     <span>{% trans "No booking found with the provided details" %}</span>
+
+      </div>
+
+      <div class="text-center mt-3">
+        <a href="{% url 'booking_lookup' %}" class="btn btn-primary">
+          {% trans "Search Again" %}
+        </a>
+      </div>
+    {% endif %}
+
+    {% if booking %}
+      <div class="card mt-4 p-4 shadow">
+
+        <h5 class="mb-3 text-success text-center">
+          {% trans "Booking Found" %}
+        </h5>
+
+        <p><strong>{% trans "Reference" %}:</strong> {{ booking.reference }}</p>
+        <p><strong>{% trans "Name" %}:</strong> {{ booking.full_name }}</p>
+        <p><strong>{% trans "Email" %}:</strong> {{ booking.email }}</p>
+        <p><strong>{% trans "Car" %}:</strong> {{ booking.car.name }}</p>
+        <p><strong>{% trans "From" %}:</strong> {{ booking.start_date }}</p>
+        <p><strong>{% trans "To" %}:</strong> {{ booking.end_date }}</p>
+        <p><strong>{% trans "Status" %}:</strong> {{ booking.get_status_display }}</p>
+
+        <div class="text-center mt-4">
+          <a href="{% url 'booking_lookup' %}" class="btn gold-btn btn-lg mt-3">
+            {% trans "Search Another Booking" %}
+          </a>
+        </div>
+      </div>
+    {% endif %}
+
+  </div>
+</div>
+
+<script>
+  function validateLookupForm() {
+    let valid = true;
+
+    const fullName = document.getElementById("fullName");
+    const reference = document.getElementById("reference");
+
+    const fullNameError = document.getElementById("fullNameError");
+    const referenceError = document.getElementById("referenceError");
+
+    // Resetimi i gabimeve
+    [fullNameError, referenceError].forEach(err => err.style.display = "none");
+    [fullName, reference].forEach(input => input.classList.remove("is-invalid"));
+
+    // Valimi i emrit
+    if (!fullName.value.trim()) {
+      fullName.classList.add("is-invalid");
+      fullNameError.style.display = "block";
+      valid = false;
+    }
+
+    // Validimi i kodit reference
+    if (!reference.value.trim()) {
+      reference.classList.add("is-invalid");
+      referenceError.style.display = "block";
+      valid = false;
+    }
+
+    return valid;
+  }
+
+  // Ne gjendjen focused ose kur shkruhet hiqet gjendja errorit
+  ["fullName", "reference"].forEach(id => {
+    const input = document.getElementById(id);
+    const error = document.getElementById(id + "Error");
+
+    if (!input || !error) return;
+
+    ["input", "focus"].forEach(event => {
+      input.addEventListener(event, () => {
+        error.style.display = "none";
+        input.classList.remove("is-invalid");
+      });
+    });
+  });
+</script>
+
+
+{% endblock %}

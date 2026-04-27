@@ -1,0 +1,819 @@
+# SUPERRENTAL - Albanian (Shqip) Translation
+# Copyright (C) 2026 SUPERRENTAL
+msgid ""
+msgstr ""
+"Project-Id-Version: SUPERRENTAL 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-28 22:00+0100\n"
+"PO-Revision-Date: 2026-01-28 22:00+0100\n"
+"Last-Translator: SUPERRENTAL Team\n"
+"Language-Team: Albanian\n"
+"Language: sq\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Navigation
+msgid "Home"
+msgstr "Kreu"
+
+msgid "Cars"
+msgstr "Makinat"
+
+msgid "About Us"
+msgstr "Rreth Nesh"
+
+msgid "Contact"
+msgstr "Kontakti"
+
+msgid "Contact Us"
+msgstr "Na Kontaktoni"
+
+msgid "Account"
+msgstr "Llogaria"
+
+msgid "Log In"
+msgstr "Hyr"
+
+msgid "Sign Up"
+msgstr "Regjistrohu"
+
+msgid "Logout"
+msgstr "Dil"
+
+msgid "Dashboard"
+msgstr "Paneli"
+
+# Hero Section
+msgid "Find Your Perfect Car Rental"
+msgstr "Gjeni Makinën Ideale për Qira"
+
+msgid "Affordable, reliable, and easy to book."
+msgstr "E përballueshme, e besueshme dhe e lehtë për t'u rezervuar."
+
+msgid "Your browser does not support the video tag."
+msgstr "Shfletuesi juaj nuk e mbështet videon."
+
+# Search Form
+msgid "Pick up location - Tirana"
+msgstr "Vendi i marrjes - Tiranë"
+
+msgid "Drop off location - Tirana"
+msgstr "Vendi i kthimit - Tiranë"
+
+msgid "Pick-up Location"
+msgstr "Vendi i Marrjes"
+
+msgid "Return Location"
+msgstr "Vendi i Kthimit"
+
+msgid "Pick-up Date"
+msgstr "Data e Marrjes"
+
+msgid "Return Date"
+msgstr "Data e Kthimit"
+
+msgid "Car Type"
+msgstr "Lloji i Makinës"
+
+msgid "Select car type"
+msgstr "Zgjidhni llojin e makinës"
+
+msgid "Select dates"
+msgstr "Zgjidhni datat"
+
+msgid "Minimum 3 days"
+msgstr "Min 3 ditë"
+
+msgid "Search"
+msgstr "Kërko"
+
+msgid "Browse All Cars"
+msgstr "Shiko Të Gjitha Makinat"
+
+# Car Types
+msgid "Economy"
+msgstr "Ekonomike"
+
+msgid "Family"
+msgstr "Familjare"
+
+msgid "SUV"
+msgstr "SUV"
+
+msgid "Luxury"
+msgstr "Luksoze"
+
+msgid "Sports"
+msgstr "Sportive"
+
+msgid "Family & Travel Cars"
+msgstr "Familjare dhe për Udhëtime"
+
+msgid "Luxury & Premium Cars"
+msgstr "Luksoze dhe Premium"
+
+# Car Specifications
+msgid "Fuel Type"
+msgstr "Lloji i Karburantit"
+
+msgid "Petrol"
+msgstr "Benzinë"
+
+msgid "Diesel"
+msgstr "Naftë"
+
+msgid "Hybrid"
+msgstr "Hibrid"
+
+msgid "Electric"
+msgstr "Elektrike"
+
+msgid "Gearbox"
+msgstr "Transmisioni"
+
+msgid "Manual"
+msgstr "Manual"
+
+msgid "Automatic"
+msgstr "Automatik"
+
+msgid "Seats"
+msgstr "Sedilje"
+
+msgid "Number of seats"
+msgstr "Numri i sediljeve"
+
+msgid "Engine Power (HP)"
+msgstr "Fuqia e Motorit (KF)"
+
+msgid "Production Year"
+msgstr "Viti i Prodhimit"
+
+msgid "Car Brand"
+msgstr "Marka e Makinës"
+
+# Pricing
+msgid "/ day"
+msgstr "/ ditë"
+
+msgid "/ per day"
+msgstr "/ në ditë"
+
+msgid "Price ($/day)"
+msgstr "Çmimi (€/ditë)"
+
+msgid "From $40/day"
+msgstr "Nga 40€/ditë"
+
+msgid "Total Price"
+msgstr "Çmimi Total"
+
+msgid "Days"
+msgstr "Ditë"
+
+msgid "day"
+msgstr "ditë"
+
+msgid "days"
+msgstr "ditë"
+
+msgid "Deposit"
+msgstr "Depozitë"
+
+msgid "Minimum Rent"
+msgstr "Qira Minimale"
+
+msgid "Minimum Reservation"
+msgstr "Rezervim Minimal"
+
+# Filters & Sorting
+msgid "Filter"
+msgstr "Filtro"
+
+msgid "Reset"
+msgstr "Fshi"
+
+msgid "Reset Filters"
+msgstr "Fshi Filtrat"
+
+msgid "Select"
+msgstr "Zgjidh"
+
+msgid "Sort By"
+msgstr "Rendit Sipas"
+
+msgid "Price: Low to High"
+msgstr "Çmimi: Nga më i ulëti"
+
+msgid "Price: High to Low"
+msgstr "Çmimi: Nga më i larti"
+
+msgid "Newest"
+msgstr "Më të Rejat"
+
+msgid "Oldest"
+msgstr "Më të Vjetrat"
+
+msgid "Popularity"
+msgstr "Popullariteti"
+
+# Car Listings
+msgid "Available Cars"
+msgstr "Makinat në Dispozicion"
+
+msgid "Cars Available"
+msgstr "Makina në Dispozicion"
+
+msgid "No cars found"
+msgstr "Nuk u gjet asnjë makinë"
+
+msgid "No available cars matching this filter"
+msgstr "Nuk ka makina të disponueshme që përputhen me këtë filtër"
+
+msgid "Try adjusting or resetting your filters to see more cars."
+msgstr "Provoni të ndryshoni ose fshini filtrat për të parë më shumë makina."
+
+msgid "View Details"
+msgstr "Shiko Detajet"
+
+msgid "Details"
+msgstr "Detaje"
+
+msgid "Book Now"
+msgstr "Rezervo Tani"
+
+msgid "Book This Car"
+msgstr "Rezervo Këtë Makinë"
+
+msgid "Book"
+msgstr "Rezervo"
+
+# Car Details
+msgid "Description"
+msgstr "Përshkrimi"
+
+msgid "is a premium vehicle offering comfort, performance and reliability. Perfect for travel and city experience."
+msgstr "është një automjet premium që ofron rehati, performancë dhe besueshmëri. Ideal për udhëtime dhe përdorim në qytet."
+
+msgid "Insurance"
+msgstr "Sigurimi"
+
+msgid "This car includes full insurance and roadside assistance."
+msgstr "Kjo makinë përfshin sigurim të plotë dhe asistencë rrugore."
+
+msgid "Prices Table"
+msgstr "Tabela e Çmimeve"
+
+msgid "Insurance Included"
+msgstr "Sigurim i Përfshirë"
+
+# Booking
+msgid "Complete Your Booking"
+msgstr "Plotëso Rezervimin"
+
+msgid "Confirm Booking"
+msgstr "Konfirmo Rezervimin"
+
+msgid "Confirm"
+msgstr "Konfirmo"
+
+msgid "Cancel"
+msgstr "Anulo"
+
+msgid "Full Name"
+msgstr "Emri i Plotë"
+
+msgid "Your Name"
+msgstr "Emri Juaj"
+
+msgid "Email Address"
+msgstr "Adresa e Email-it"
+
+msgid "Your Email"
+msgstr "Email-i Juaj"
+
+msgid "Phone Number"
+msgstr "Numri i Telefonit"
+
+msgid "Leave a note (optional)"
+msgstr "Lini një shënim (opsionale)"
+
+msgid "Optional"
+msgstr "Opsionale"
+
+msgid "Checking availability..."
+msgstr "Po kontrollohet disponueshmëria..."
+
+msgid "Available"
+msgstr "E Disponueshme"
+
+msgid "Unavailable"
+msgstr "E Padisponueshme"
+
+msgid "Select dates to check availability"
+msgstr "Zgjidhni datat për të kontrolluar disponueshmërinë"
+
+# Features & Benefits
+msgid "Why Choose Us?"
+msgstr "Pse të Na Zgjidhni?"
+
+msgid "No Hidden Fees"
+msgstr "Pa Tarifa të Fshehura"
+
+msgid "Transparent pricing with no surprises."
+msgstr "Çmime transparente pa surpriza."
+
+msgid "Drive with confidence, insurance is always included."
+msgstr "Drejtoni makinën me siguri, sigurimi është gjithmonë i përfshirë."
+
+msgid "24/7 Support"
+msgstr "Mbështetje 24/7"
+
+msgid "We are always available whenever you need us."
+msgstr "Jemi gjithmonë në dispozicion kurdo që të na nevojiteni."
+
+msgid "New & Clean Cars"
+msgstr "Makina të Reja dhe të Pastra"
+
+msgid "Modern, well-maintained, and spotless vehicles."
+msgstr "Automjete moderne, të mirëmbajtura dhe shumë të pastra."
+
+msgid "Economical"
+msgstr "Ekonomike"
+
+msgid "Find the best deals that fit your budget."
+msgstr "Gjeni ofertat më të mira që i përshtaten buxhetit tuaj."
+
+msgid "Reliable"
+msgstr "Të Besueshme"
+
+msgid "All vehicles are regularly inspected and maintained."
+msgstr "Të gjitha automjetet kontrollohen dhe mirëmbahen rregullisht."
+
+msgid "Easy"
+msgstr "E Thjeshtë"
+
+msgid "Easy Booking"
+msgstr "Rezervim i Lehtë"
+
+msgid "Fast booking process with instant confirmation."
+msgstr "Proces i shpejtë rezervimi me konfirmim të menjëhershëm."
+
+msgid "Choose your location, dates, and car type."
+msgstr "Zgjidhni vendndodhjen, datat dhe llojin e makinës."
+
+# Offers & Promotions
+msgid "Weekly Offers"
+msgstr "Oferta Javore"
+
+msgid "Save up to 25%% on selected cars! Book now before offers expire."
+msgstr "Kurseni deri në 25%% në makina të përzgjedhura! Rezervoni tani para se ofertat të skadojnë."
+
+msgid "View Offers"
+msgstr "Shiko Ofertat"
+
+# Testimonials
+msgid "What our clients say"
+msgstr "Çfarë Thonë Klientët Tanë"
+
+msgid "Excellent service, easy booking and reliable cars!"
+msgstr "Shërbim i shkëlqyer, rezervim i lehtë dhe makina të besueshme!"
+
+msgid "Great prices and very clean vehicles."
+msgstr "Çmime shumë të mira dhe makina shumë të pastra."
+
+msgid "Fast booking and excellent support."
+msgstr "Rezervim i shpejtë dhe mbështetje e shkëlqyer."
+
+msgid "Very professional and transparent service."
+msgstr "Shërbim shumë profesional dhe transparent."
+
+msgid "Easy pickup and return process."
+msgstr "Proces i lehtë i marrjes dhe dorëzimit të makinës."
+
+msgid "Best rental platform I’ve used so far."
+msgstr "Platforma më e mirë e makinave me qira që kam përdorur deri tani."
+
+
+# Statistics
+msgid "Our Achievements"
+msgstr "Arritjet Tona"
+
+msgid "Happy Clients"
+msgstr "Klientë të Kënaqur"
+
+msgid "Years Experience"
+msgstr "Vite Përvojë"
+
+msgid "Partners"
+msgstr "Partnerë"
+
+msgid "Our Partners"
+msgstr "Partnerët Tanë"
+
+msgid "Cities Covered"
+msgstr "Qytete të Mbuluara"
+
+# About Us
+msgid "About FastCar Rentals"
+msgstr "Rreth FastCar Rentals"
+
+msgid "At FastCar Rentals, we believe in making your travel experiences seamless, luxurious, and unforgettable. With a wide selection of premium vehicles, competitive pricing, and top-notch customer service, we are here to drive your adventures forward."
+msgstr "Në FastCar Rentals besojmë në krijimin e përvojave të udhëtimit të lehta, luksoze dhe të paharrueshme. Me një përzgjedhje të gjerë automjetesh premium, çmime konkurruese dhe shërbim të shkëlqyer ndaj klientit, ne jemi këtu për të çuar aventurat tuaja përpara."
+
+msgid "A Growing Rental Marketplace"
+msgstr "Një Treg në Rritje për Qira"
+
+msgid "By partnering with verified rental companies, we ensure that every vehicle listed on our platform meets quality and safety standards."
+msgstr "Duke bashkëpunuar me kompani të verifikuara qiraje, ne sigurojmë që çdo automjet i listuar në platformën tonë të plotësojë standardet e cilësisë dhe sigurisë."
+
+msgid "All rental companies on FastCar Rentals are carefully verified. Vehicles are inspected regularly, and pricing is always shown clearly before booking."
+msgstr "Të gjitha kompanitë e qirasë në FastCar Rentals janë verifikuar me kujdes. Automjetet kontrollohen rregullisht dhe çmimet tregohen gjithmonë qartë para rezervimit."
+
+msgid "Cars for Every Journey"
+msgstr "Makina për Çdo Udhëtim"
+
+msgid "Affordable and efficient vehicles for everyday driving."
+msgstr "Automjete të përballueshme dhe efikase për përdorim të përditshëm."
+
+# Contact
+msgid "Have questions or want to book a car? Get in touch with us!"
+msgstr "Keni pyetje ose dëshironi të rezervoni një makinë? Na kontaktoni!"
+
+msgid "Subject"
+msgstr "Subjekti"
+
+msgid "Message"
+msgstr "Mesazhi"
+
+msgid "Your Message"
+msgstr "Mesazhi Juaj"
+
+msgid "Send Message"
+msgstr "Dërgo Mesazhin"
+
+# Call to Action
+msgid "Ready to Drive?"
+msgstr "Gati për të Nisur?"
+
+msgid "Book your car now and hit the road in minutes."
+msgstr "Rezervoni makinën tuaj tani dhe nisuni për pak minuta."
+
+# Authentication
+msgid "Sign in to your account"
+msgstr "Hyni në llogarinë tuaj"
+
+msgid "Don't have an account?"
+msgstr "Nuk keni llogari?"
+
+msgid "Already have an account?"
+msgstr "Keni tashmë një llogari?"
+
+msgid "Password"
+msgstr "Fjalëkalimi"
+
+msgid "Confirm Password"
+msgstr "Konfirmo Fjalëkalimin"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Remember me"
+msgstr "Më mbaj mend"
+
+msgid "Forgot password?"
+msgstr "Harruat fjalëkalimin?"
+
+# Footer
+msgid "Pages"
+msgstr "Faqe"
+
+msgid "Follow Us"
+msgstr "Na Ndiqni"
+
+msgid "All Rights Reserved"
+msgstr "Të Gjitha të Drejtat e Rezervuara"
+
+# Dashboard
+msgid "My Bookings"
+msgstr "Rezervimet e Mia"
+
+msgid "My Cars"
+msgstr "Makinat e Mia"
+
+msgid "Add Car"
+msgstr "Shto Makinë"
+
+msgid "Edit Car"
+msgstr "Modifiko Makinën"
+
+msgid "Company Profile"
+msgstr "Profili i Kompanisë"
+
+msgid "Settings"
+msgstr "Cilësimet"
+
+# Compare
+msgid "Compare"
+msgstr "Krahaso"
+
+msgid "Close"
+msgstr "Mbyll"
+
+# Common Actions
+msgid "Save"
+msgstr "Ruaj"
+
+msgid "Edit"
+msgstr "Modifiko"
+
+msgid "Delete"
+msgstr "Fshi"
+
+msgid "Submit"
+msgstr "Dërgo"
+
+msgid "Back"
+msgstr "Kthehu"
+
+msgid "Next"
+msgstr "Vazhdo"
+
+msgid "Previous"
+msgstr "Prapa"
+
+msgid "Loading..."
+msgstr "Po ngarkohet..."
+
+msgid "Please wait..."
+msgstr "Ju lutem prisni..."
+
+# Status Messages
+msgid "Success!"
+msgstr "Sukses!"
+
+msgid "Error!"
+msgstr "Gabim!"
+
+msgid "Warning!"
+msgstr "Paralajmërim!"
+
+msgid "Info"
+msgstr "Informacion"
+
+# Validation
+msgid "This field is required"
+msgstr "Kjo fushë është e detyrueshme"
+
+msgid "Invalid email address"
+msgstr "Adresë email e pasaktë"
+
+msgid "Password too short"
+msgstr "Fjalëkalimi shumë i shkurtër"
+
+msgid "Passwords do not match"
+msgstr "Fjalëkalimet nuk përputhen"
+
+msgid "Search Booking"
+msgstr "Kërko Rezervimin"
+
+msgid "Please enter your booking reference"
+msgstr "Ju lutem vendosni kodin e rezervimit"
+
+msgid "Please enter your full name"
+msgstr "Ju lutem vendosni emrin tuaj të plotë"
+
+msgid "Find Your Booking"
+msgstr "Gjeni Rezervimin Tuaj"
+
+msgid "We offer high quality rental cars. Book now and enjoy your ride!"
+msgstr "Ne ofrojmë makina me qira të cilësisë së lartë. Rezervoni tani dhe shijoni udhëtimin tuaj!"
+
+msgid "Find My Booking"
+msgstr "Gjej Rezervimin Tim"
+
+msgid "Your full name"
+msgstr "Emri juaj i plotë"
+
+msgid "Booking Reference"
+msgstr "Kodi i Rezervimit"
+
+msgid "From"
+msgstr "Nga"
+
+msgid "Register"
+msgstr "Regjistrohu"
+
+msgid "Create an Account"
+msgstr "Krijo një llogari"
+
+msgid "Enter your full name"
+msgstr "Shkruani emrin tuaj të plotë"
+
+msgid "Enter your email"
+msgstr "Shkruani email-in tuaj"
+
+msgid "Enter your phone number"
+msgstr "Shkruani numrin tuaj të telefonit"
+
+msgid "Type your password"
+msgstr "Vendosni fjalëkalimin tuaj"
+
+msgid "Repeat your password"
+msgstr "Përsëritni fjalëkalimin tuaj"
+
+msgid "Reference"
+msgstr "Referenca"
+
+msgid "Name"
+msgstr "Emri"
+
+msgid "Car"
+msgstr "Makina"
+
+msgid "To"
+msgstr "Deri më"
+
+msgid "Status"
+msgstr "Statusi"
+
+msgid "Search Another Booking"
+msgstr "Kërko Një Rezervim Tjetër"
+
+msgid "Booking Found"
+msgstr "Rezervimi u gjet"
+
+msgid "Message Sent Successfully"
+msgstr "Mesazhi u dërgua me sukses"
+
+msgid "Thank you for contacting us!"
+msgstr "Faleminderit që na kontaktuat!"
+
+msgid "We have received your message and will get back to you shortly."
+msgstr "Ne e kemi marrë mesazhin tuaj dhe do t'ju kontaktojmë së shpejti."
+
+msgid "I confirm that I am over 21 years old to drive this car"
+msgstr "Konfirmoj që jam mbi 21 vjeç për të drejtuar këtë makinë"
+
+msgid "Minimum %(days)s days required"
+msgstr "Kërkohen minimum %(days)s ditë"
+
+msgid "FastCar Rentals is a modern car rental marketplace that brings together trusted rental companies and hundreds of vehicles into one simple, transparent, and secure booking platform."
+msgstr "FastCar Rentals është një platformë moderne për marrjen e makinave me qira që bashkon kompani të besueshme dhe qindra automjete në një sistem të thjeshtë, transparent dhe të sigurt rezervimi."
+
+msgid "Rental Companies"
+msgstr "Kompanitë e Qirasë"
+
+msgid "Successful Bookings"
+msgstr "Rezervime të Suksesshme"
+
+msgid "Spacious and comfortable cars for families and long trips."
+msgstr "Makina të bollshme dhe komode për familje dhe udhëtime të gjata."
+
+msgid "High-end cars for business travel and special occasions."
+msgstr "Makina luksoze për udhëtime biznesi dhe raste të veçanta."
+
+msgid "Our platform is designed to protect customer data and ensure secure payments at every step."
+msgstr "Platforma jonë është projektuar për të mbrojtur të dhënat e klientëve dhe për të garantuar pagesa të sigurta në çdo hap."
+
+msgid "Trust & Transparency"
+msgstr "Besueshmëri & Transparencë"
+
+msgid "View offers from multiple rental companies."
+msgstr "Shiko oferta nga disa kompani qiradhënëse."
+
+msgid "Reserve your car with transparent pricing and instant confirmation."
+msgstr "Rezervo makinën tënde me çmime transparente dhe konfirmim të menjëhershëm."
+
+msgid "How It Works"
+msgstr "Si Funksionon"
+
+msgid "Family Cars & SUVs"
+msgstr "Makina Familjare & SUV"
+
+msgid "Economy & City Cars"
+msgstr "Makina Ekonomike & Urbane"
+
+msgid "Our Mission"
+msgstr "Misioni Ynë"
+
+msgid "Luxury & Premium Vehicles"
+msgstr "Makina Luksoze & Premium"
+
+msgid "Our mission is to make car rental simple, reliable, and accessible. We believe customers should be able to compare cars, prices, and rental companies easily, without hidden fees or complicated processes."
+msgstr "Misioni ynë është ta bëjmë marrjen e makinave me qira të thjeshtë, të besueshme dhe të aksesueshme. Ne besojmë se klientët duhet të jenë në gjendje të krahasojnë lehtësisht makinat, çmimet dhe kompanitë e qirasë, pa tarifa të fshehura apo procese të ndërlikuara."
+
+msgid "Showing available cars from {{ start }} to {{ end }} from {{ company }}"
+msgstr "Makina të disponueshme nga {{ start }} deri në {{ end }} nga {{ company }}"
+
+msgid "Showing available cars from {{ start }} to {{ end }}"
+msgstr "Makina të disponueshme nga {{ start }} deri në {{ end }}"
+
+msgid "Showing cars of type {{ type }} from {{ company }}"
+msgstr "Makina të tipit {{ type }} nga {{ company }}"
+
+msgid "Showing cars from {{ company }}"
+msgstr "Makina nga {{ company }}"
+
+msgid "Showing cars of type {{ type }}"
+msgstr "Makina të tipit {{ type }}"
+
+msgid "No booking found with the provided details"
+msgstr "Nuk u gjet asnjë rezervim me këto të dhëna"
+
+# NEW TRANSLATIONS (Add these)
+msgid "Please select the dates"
+msgstr "Ju lutem zgjidhni datat"
+
+msgid "Minimum"
+msgstr "Minimum"
+
+msgid "Select return date"
+msgstr "Zgjedhni daten e kthimit"
+
+msgid "days required"
+msgstr "ditë"
+
+msgid "Error checking availability"
+msgstr "Gabim në kontrollimin e disponueshmërisë"
+
+msgid "Please enter a valid phone number"
+msgstr "Ju lutemi shkruani një numër telefoni valid"
+
+msgid "Please enter a valid email address"
+msgstr "Ju lutemi shkruani një adresë email të vlefshme"
+
+msgid "You must confirm that you are over 21 years old"
+msgstr "Duhet të konfirmoni se jeni mbi 21 vjeç"
+
+msgid "Name must be at least 3 characters"
+msgstr "Emri duhet të jetë të paktën 3 karaktere"
+
+msgid "Phone number must be at least 10 digits"
+msgstr "Numri i telefonit duhet të ketë të paktën 10 shifra"
+
+msgid "No available cars matching this filter."
+msgstr "Nuk ka makina të disponueshme që përputhen me këtë filtër."
+
+msgid "All Companies"
+msgstr "Të Gjitha Kompanitë"
+
+# ── LOGIN ──────────────────────────────────────────────────────────────────────
+
+msgid "Please enter your email and password."
+msgstr "Ju lutem shkruani email-in dhe fjalëkalimin tuaj."
+
+msgid "Please enter your email."
+msgstr "Ju lutem shkruani email-in tuaj."
+
+msgid "Please enter your password."
+msgstr "Ju lutem shkruani fjalëkalimin tuaj."
+
+msgid "Please enter a valid email address."
+msgstr "Ju lutem shkruani një adresë email të vlefshme."
+
+msgid "No account found with this email."
+msgstr "Nuk u gjet asnjë llogari me këtë email."
+
+msgid "Incorrect password. Please try again."
+msgstr "Fjalëkalim i gabuar. Ju lutem provoni përsëri."
+
+msgid "Your account has been deactivated."
+msgstr "Llogaria juaj është çaktivizuar."
+
+# ── REGISTER ───────────────────────────────────────────────────────────────────
+
+msgid "Please fill in all fields."
+msgstr "Ju lutem plotësoni të gjitha fushat."
+
+msgid "Please enter your full name."
+msgstr "Ju lutem shkruani emrin tuaj të plotë."
+
+msgid "Full name must be at least 7 characters."
+msgstr "Emri  duhet të ketë të paktën 7 karaktere."
+
+msgid "Please enter your phone number."
+msgstr "Ju lutem shkruani numrin tuaj të telefonit."
+
+msgid "Please enter a valid phone number."
+msgstr "Ju lutem shkruani një numër telefoni të vlefshëm."
+
+msgid "Phone number must be at least 10 digits."
+msgstr "Numri i telefonit duhet të ketë të paktën 10 shifra."
+
+msgid "Please enter a password."
+msgstr "Ju lutem shkruani një fjalëkalim."
+
+msgid "Password must be at least 8 characters."
+msgstr "Fjalëkalimi duhet të ketë të paktën 8 karaktere."
+
+msgid "Please confirm your password."
+msgstr "Ju lutem konfirmoni fjalëkalimin tuaj."
+
+msgid "Passwords do not match."
+msgstr "Fjalëkalimet nuk përputhen."
+
+msgid "An account with this email already exists."
+msgstr "Një llogari me këtë email ekziston tashmë."

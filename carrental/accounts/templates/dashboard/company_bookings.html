@@ -1,0 +1,99 @@
+{% extends "dashboard/base_dashboard.html" %}
+
+{% block content %}
+<h2 class="mb-4">My Bookings</h2>
+
+<form method="post" action="{% url 'bulk_update_bookings' %}">
+  {% csrf_token %}
+
+  <!--  ACTION BUTTONS -->
+  <div class="mb-3 d-flex gap-2">
+    <button type="submit" name="action" value="confirm"
+            class="btn btn-success btn-sm">
+      Confirm Selected
+    </button>
+
+    <button type="submit" name="action" value="cancel"
+            class="btn btn-danger btn-sm">
+      Cancel Selected
+    </button>
+  </div>
+
+  <table class="table table-striped align-middle">
+    <thead>
+      <tr>
+        <th>
+          <input type="checkbox" id="select-all">
+        </th>
+        <th>Car</th>
+        <th>User</th>
+        <th>Period</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for booking in bookings %}
+        <tr>
+          <!-- CHECKBOX -->
+          <td>
+            {% if booking.status == "pending" %}
+              <input type="checkbox"
+                     name="booking_ids"
+                     value="{{ booking.id }}">
+            {% endif %}
+          </td>
+
+          <td>{{ booking.car.name }}</td>
+          <td>{{ booking.email }}</td>
+          <td>{{ booking.start_date }} → {{ booking.end_date }}</td>
+
+          <td>
+            <span class="badge
+              {% if booking.status == 'pending' %}bg-warning
+              {% elif booking.status == 'confirmed' %}bg-success
+              {% else %}bg-danger{% endif %}
+            ">
+              {{ booking.get_status_display }}
+            </span>
+          </td>
+
+          <!--  VEPRIMET QE KRYEN MENAXHUESI I FAQES -->
+          <td>
+            {% if booking.status == "pending" %}
+              <a href="{% url 'approve_booking' booking.id %}"
+                 class="btn btn-sm btn-success">
+                Approve
+              </a>
+
+              <a href="{% url 'cancel_booking' booking.id %}"
+                 class="btn btn-sm btn-danger">
+                Cancel
+              </a>
+            {% else %}
+              —
+            {% endif %}
+          </td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="6" class="text-center text-muted">
+            No bookings yet
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</form>
+
+<!-- SELEKTON TE GJITHA -->
+<script>
+document.getElementById("select-all")?.addEventListener("change", function () {
+  document.querySelectorAll(
+    'input[name="booking_ids"]'
+  ).forEach(cb => cb.checked = this.checked);
+});
+</script>
+
+{% endblock %}

@@ -1,0 +1,223 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block content %}
+<div class="container-fluid px-5 py-5">
+  <div class="row">
+
+    
+    <!-- FILTTRI -->
+    <div class="col-lg-3 col-md-4">
+      <section class="py-4 bg-light rounded sticky-filter">
+
+        <h4 class="mb-4 text-center fw-bold">
+          {% trans "Filter" %}
+        </h4>
+<form
+  id="filtersForm"
+  hx-get="{% url 'cars' %}"
+  hx-target="#cars-results"
+  hx-trigger="change delay:3ms"
+  hx-push-url="true"
+>
+
+{% for key, value in request.GET.items %}
+  {% if key != "priceMin" and key != "priceMax" and key != "yearMin" and key != "yearMax" and key != "seatsMin" and key != "seatsMax" and key != "powerMin" and key != "powerMax" and key != "sort" %}
+    <input type="hidden" name="{{ key }}" value="{{ value }}">
+  {% endif %}
+{% endfor %}
+
+   
+<input type="hidden" name="priceMin" id="priceMin">
+<input type="hidden" name="priceMax" id="priceMax">
+<input type="hidden" name="yearMin"  id="yearMin">
+<input type="hidden" name="yearMax"  id="yearMax">
+<input type="hidden" name="seatsMin" id="seatsMin">
+<input type="hidden" name="seatsMax" id="seatsMax">
+<input type="hidden" name="powerMin" id="powerMin">
+<input type="hidden" name="powerMax" id="powerMax">
+          <!-- Price -->
+          <div class="mb-4">
+            <label class="form-label">
+              {% trans "Price (€/day)" %}:
+              <span id="priceValue" class="text-primary fw-bold"></span>
+            </label>
+            <div id="priceRange" class="slider"></div>
+          </div>
+
+          <!-- Year -->
+          <div class="mb-4">
+            <label class="form-label">
+              {% trans "Production Year" %}:
+              <span id="yearValue" class="text-primary fw-bold"></span>
+            </label>
+            <div id="yearRange" class="slider"></div>
+          </div>
+
+          <!-- Seats -->
+          <div class="mb-4">
+            <label class="form-label">
+              {% trans "Number of seats" %}:
+              <span id="seatsValue" class="text-primary fw-bold"></span>
+            </label>
+            <div id="seatsRange" class="slider"></div>
+          </div>
+
+          <!-- Power -->
+          <div class="mb-4">
+            <label class="form-label">
+              {% trans "Engine Power (HP)" %}:
+              <span id="powerValue" class="text-primary fw-bold"></span>
+            </label>
+            <div id="powerRange" class="slider"></div>
+          </div>
+
+          <!-- COMPANY FILTER -->
+          <div class="mb-3">
+            <label class="form-label">
+              {% trans "Rental Company" %}
+            </label>
+            <select class="form-select" id="companyFilter" name="company">
+              <option value="">{% trans "All Companies" %}</option>
+              {% for company in companies %}
+                <option value="{{ company.id }}" {% if request.GET.company == company.id|stringformat:"s" %}selected{% endif %}>
+                  {{ company.name }}
+                </option>
+              {% endfor %}
+            </select>
+          </div>
+
+          <!-- Brand -->
+          <div class="mb-3">
+            <label class="form-label">
+              {% trans "Car Brand" %}
+            </label>
+           <select class="form-select" id="brandFilter" name="brand">
+              <option value="">{% trans "Select" %}</option>
+              <option>Mercedes</option>
+              <option>BMW</option>
+              <option>Audi</option>
+              <option>Toyota</option>
+              <option>Lamborghini</option>
+              <option>Rolls-Royce</option>
+              <option>Ferrari</option>
+              <option>Porsche</option>
+              <option>Opel</option>
+              <option>Hyundai</option>
+              <option>Ford</option>
+              <option>Volkswagen</option>
+              <option>Bentley</option>
+              <option>Skoda</option>
+            </select>
+          </div>
+
+          <!-- Fuel -->
+          <div class="mb-3">
+            <label class="form-label">{% trans "Fuel Type" %}</label>
+           <select class="form-select" id="fuelFilter" name="fuel">
+              <option value="">{% trans "Select" %}</option>
+              <option value="petrol">{% trans "Petrol" %}</option>
+              <option value="diesel">{% trans "Diesel" %}</option>
+              <option value="hybrid">{% trans "Hybrid" %}</option>
+              <option value="electric">{% trans "Electric" %}</option>
+            </select>
+          </div>
+
+          <!-- Gear -->
+          <div class="mb-4">
+            <label class="form-label">{% trans "Gearbox" %}</label>
+            <select class="form-select" id="gearFilter" name="gear">
+              <option value="">{% trans "Select" %}</option>
+              <option value="manual">{% trans "Manual" %}</option>
+              <option value="automatic">{% trans "Automatic" %}</option>
+            </select>
+          </div>
+
+          <!-- Sort -->
+          <div class="mb-3">
+            <label class="form-label">{% trans "Sort By" %}</label>
+         <select class="form-select" id="sortFilter" name="sort">
+              <option value="">{% trans "Select" %}</option>
+              <option value="price-asc">{% trans "Price: Low to High" %}</option>
+              <option value="price-desc">{% trans "Price: High to Low" %}</option>
+              <option value="year-desc">{% trans "Newest" %}</option>
+              <option value="year-asc">{% trans "Oldest" %}</option>
+              <option value="popular">{% trans "Popularity" %}</option>
+            </select>
+          </div>
+
+          <!-- Buttons -->
+          <div class="row g-2">
+            <div class="col-6 d-grid">
+              <button type="button" class="btn btn-primary">
+                {% trans "Search" %}
+              </button>
+            </div>
+
+            <div class="col-6 d-grid">
+              <button
+  type="button"
+  class="btn btn-primary"
+  onclick="window.location.href='{% url 'cars' %}'">
+  {% trans "Reset" %}
+</button>
+
+
+            </div>
+          </div>
+
+        </form>
+      </section>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="col-lg-9 col-md-8">
+
+      <h1 class="text-center mb-4">
+        {% trans "Available Cars" %}
+      </h1>
+      
+<!-- Mesazhi dinamik ne varesi te zgjedhjes nga home search -->
+{% if request.GET.start or request.GET.end or request.GET.company or request.GET.type %}
+  <div class="alert alert-info text-center mb-4"
+       style="background: rgba(255,215,0,0.15); border: 1px solid rgba(255,215,0,0.3); color: #000; border-radius: 12px;">
+
+    <i class="bi bi-info-circle me-2"></i>
+
+    <strong>
+
+      {% if request.GET.start and request.GET.end %}
+        {% if selected_company %}
+          {% blocktranslate with start=request.GET.start end=request.GET.end company=selected_company.name %}Showing available cars from {{ start }} to {{ end }} from {{ company }}{% endblocktranslate %}
+        {% else %}
+          {% blocktranslate with start=request.GET.start end=request.GET.end %}Showing available cars from {{ start }} to {{ end }}{% endblocktranslate %}
+        {% endif %}
+
+      {% elif selected_company and request.GET.type %}
+        {% blocktranslate with type=request.GET.type company=selected_company.name %}Showing cars of type {{ type }} from {{ company }}{% endblocktranslate %}
+
+      {% elif selected_company %}
+        {% blocktranslate with company=selected_company.name %}Showing cars from {{ company }}{% endblocktranslate %}
+
+      {% elif request.GET.type %}
+        {% blocktranslate with type=request.GET.type %}Showing cars of type {{ type }}{% endblocktranslate %}
+
+      {% else %}
+        {% trans "Showing filtered results" %}
+      {% endif %}
+
+    </strong>
+  </div>
+{% endif %}
+
+
+<!--Rezultatet qe vijne nga partials.html-->
+      <div id="cars-results">
+        {% include "partials/car_list.html" %}
+      </div>
+
+    </div>
+
+  </div>
+</div>
+{% endblock %}

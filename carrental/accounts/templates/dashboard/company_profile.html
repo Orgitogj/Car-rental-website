@@ -1,0 +1,31 @@
+{% extends "dashboard/base_dashboard.html" %}
+
+{% block content %}
+<h2 class="mb-4">Company Profile</h2>
+
+<form method="POST" class="card p-4 shadow" style="max-width:600px">
+  {% csrf_token %}
+
+  <div class="mb-3">
+    <label class="form-label">Company Name</label>
+    <input type="text" name="name" class="form-control" value="{{ company.name }}">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Email</label>
+    <input type="email" name="email" class="form-control" value="{{ company.email }}">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Phone</label>
+    <input type="text" name="phone" class="form-control" value="{{ company.phone }}">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Description</label>
+    <textarea name="description" class="form-control" rows="4">{{ company.description }}</textarea>
+  </div>
+
+  <button class="btn btn-primary">Save Changes</button>
+</form>
+{% endblock %}

@@ -1,0 +1,3006 @@
+/* ====================================================================
+   SUPERRENTAL - MAIN STYLESHEET
+   Optimized & Organized CSS
+   ==================================================================== */
+
+/* ====================================================================
+   TABLE OF CONTENTS
+   ====================================================================
+   1. CSS RESET & GLOBAL STYLES
+   2. CSS VARIABLES
+   3. BODY & BACKGROUND
+   4. NAVIGATION
+   5. HERO SECTION
+   6. SEARCH FORM
+   7. SECTIONS (Featured, Premium, Partners, etc.)
+   8. CARDS & CAR LISTINGS
+   9. FILTERS
+   10. FORMS & INPUTS
+   11. BUTTONS
+   12. MODALS & POPUPS
+   13. BOOKING COMPONENTS
+   14. AUTHENTICATION PAGES (Login, Signup)
+   15. CAR DETAILS PAGE
+   16. CONTACT PAGE
+   16. ABOUT US PAGE
+   17. SUCCESS PAGES
+   18. TESTIMONIALS & CAROUSEL
+   19. COMPANY BRANDING
+   20. FOOTER
+   21. ANIMATIONS
+   22. RESPONSIVE DESIGN
+   ==================================================================== */
+
+
+/* ====================================================================
+   1. CSS RESET & GLOBAL STYLES
+   ==================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  color: gold;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: 0.25s ease-in-out;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+
+/* ====================================================================
+   2. CSS VARIABLES
+   ==================================================================== */
+
+:root {
+  --gold: rgba(255, 215, 0, 1);
+  --gold-soft: rgba(255, 215, 0, 0.25);
+  --dark-glass: rgba(0, 0, 0, 0.65);
+  --white: #ffffff;
+}
+
+
+/* ====================================================================
+   3. BODY & BACKGROUND
+   ==================================================================== */
+
+body {
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 215, 0, 0.18),
+    rgba(0, 0, 0, 0.95)
+  );
+  background-attachment: fixed;
+}
+
+/* Premium body variant */
+.premium-body {
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 215, 0, 0.15),
+    rgba(0, 0, 0, 0.95)
+  ) !important;
+  background-attachment: fixed;
+  color: white;
+}
+
+
+/* ====================================================================
+   4. NAVIGATION
+   ==================================================================== */
+
+.navbar {
+  background: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.12);
+  position: relative;
+  z-index: 9999;
+  min-height: 60px !important;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.navbar-brand {
+  font-size: 28px !important;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #ffd700 !important;
+}
+
+.navbar .nav-link {
+  color: #e9ecef;
+  font-weight: 600;
+  transition: color 0.2s ease-in-out, transform 0.2s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-link.active {
+  color: #ffd700 !important;
+  transform: translateY(-1px);
+}
+
+/* Language Dropdown */
+#langDropdown {
+  color: white !important;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+#langDropdown img {
+  border-radius: 4px;
+}
+.nav-item {
+  list-style: none;
+}
+#currentLang {
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.dropdown-menu {
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  padding: 8px 10px;
+  box-shadow: 0 10px 20px rgba(241, 201, 3, 0.55);
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.dropdown-menu li {
+  list-style: none !important;
+}
+
+.dropdown-item {
+  color: white !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background: rgba(255, 215, 0, 0.15);
+  border: 1px solid gold;
+  color: gold !important;
+  transform: translateX(4px);
+}
+
+.dropdown-item img {
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+/* Mobile Navigation */
+@media (max-width: 992px) {
+  .navbar {
+    min-height: 70px;
+  }
+}
+
+
+/* ====================================================================
+   5. HERO SECTION
+   ==================================================================== */
+
+header.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.hero video {
+  pointer-events: none;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero .overlay {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(255, 215, 0, 0.18),
+    rgba(0, 0, 0, 0.85)
+  );
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+header.hero h1 {
+  color: #ffe600;
+  font-size: 4rem;
+  font-weight: 900;
+  -webkit-text-stroke: 1px black;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 1);
+}
+
+header.hero p.lead {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #ffffff;
+  line-height: 1.6;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 8px;
+  backdrop-filter: blur(3px);
+}
+
+
+/* ====================================================================
+   6. SEARCH FORM
+   ==================================================================== */
+
+.hero form {
+  display: block;
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 0 20px; 
+}
+.hero form .row:first-child {
+  margin-bottom: 20px;
+  margin-left: 225px;
+}
+
+/* Margin ndermjet Pick up dhe Drop off */
+.hero form .row:first-child .col-md-4:nth-child(1) input:first-child {
+  margin-bottom: 12px !important; 
+}
+
+/* Margin ndermjet Start date dhe End date */
+.hero form .row:first-child .col-md-4:nth-child(2) input:first-child {
+  margin-bottom: 12px;
+}
+
+/* Margin ndermjet Car Type dhe Company */
+.hero form .row:first-child .col-md-4:nth-child(3) select:first-child {
+  margin-bottom: 120px !important;
+}
+
+/* Margin bottom per rreshtin 2 (Search & Reset buttons) */
+.hero form .row:nth-child(2) {
+  margin-bottom: 20px; 
+}
+
+@media (min-width: 768px) {
+  .hero form .row:first-child .col-md-4 {
+    margin-bottom: 0 !important;
+  }
+}
+
+.hero input,
+.hero select {
+  padding: 0px 15px; 
+  height: 40px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.hero input::placeholder {
+  color: #adb5bd;
+}
+
+.hero input:focus,
+.hero select:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px rgba(255, 215, 0, 0.7);
+}
+
+.hero button {
+  border-radius: 999px;
+  padding: 10px 30px;
+  background: linear-gradient(135deg, #ffd700, #ffb800);
+  border: none;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.hero button:hover {
+  transform: translateY(-2px) scale(1.03);
+  font-weight: bolder;
+  box-shadow: 0 16px 40px rgba(255, 215, 0, 0.4);
+  filter: brightness(1.06);
+}
+
+/* Stilimi i inputeve ne forms */
+#searchForm .form-control,
+#searchForm .form-select {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+#searchForm input::placeholder {
+  color: #ffffff !important;
+  opacity: 0.9;
+}
+
+#searchForm input {
+  color: #fff;
+}
+
+#searchForm .form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='white' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2.5rem;
+  color-scheme: dark;
+}
+
+
+/* Ngjyra e tekstit të datës */
+input[type="date"] {
+  position: relative;
+  color-scheme: dark;
+  color: #FFD700; 
+}
+
+.form-control[type="date"]::-webkit-calendar-picker-indicator {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z'/%3E%3C/svg%3E") !important;
+    background-size: 20px 20px !important;  
+    width: 22px !important;
+    height: 22px !important;
+    cursor: pointer !important;
+    opacity: 1 !important;
+}
+
+.form-control[type="date"]::-moz-calendar-picker-indicator {
+    filter: invert(1) brightness(2) !important;
+    cursor: pointer;
+    width: 22px !important;
+    height: 22px !important;
+}
+
+/* Kalendari popup dark mode */
+.form-control[type="date"] {
+    color-scheme: dark;
+}
+/* Opsionet dropdown */
+#searchForm .form-select option {
+  font-size: 20px;
+  background: #000000;
+  color: #fff;
+}
+
+#searchForm .form-select option:hover,
+#searchForm .form-select option:focus {
+  background: gold !important;
+  color: #000 !important;
+}
+
+#searchForm .form-select option:checked {
+  background: gold !important;
+  color: #000 !important;
+}
+
+#searchForm .form-control,
+#searchForm .form-select {
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* ====================================================================
+   7. SECTIONS (Featured, Premium, Partners, Stats, etc.)
+   ==================================================================== */
+
+.lux-section,
+.advanced-filter-box,
+.featured-section,
+.premium-section,
+.partners-section,
+.stats {
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 215, 0, 0.15),
+    rgba(0, 0, 0, 0.9)
+  ) !important;
+  padding: 60px 0;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(18px);
+}
+
+/* Section Headings */
+.lux-section h2,
+.lux-section h4,
+.featured-section h2,
+.premium-section h2,
+.stats h2 {
+  color: #fff;
+  font-weight: 800;
+}
+
+.lux-section p,
+.featured-section p,
+.premium-section p {
+  color: #fff;
+}
+
+/* Stats Section */
+.stats h3 {
+  color: gold;
+  font-size: 38px;
+  font-weight: 800;
+}
+
+.stats p {
+  color: #fff;
+  opacity: 0.9;
+}
+
+/* Partners Section */
+.partners-section {
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 215, 0, 0.15),
+    rgba(0, 0, 0, 0.9)
+  ) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(18px);
+  color: #fff;
+}
+
+.partner-logo {
+  width: 160px;
+  height: 100px;
+  margin: 20px;
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+  filter: grayscale(30%);
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+}
+
+.partner-logo:hover {
+  transform: scale(1.1) translateY(-4px);
+  filter: grayscale(0%);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.7);
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  padding: 80px 0;
+}
+
+.why-choose-us h2 {
+  font-weight: 900;
+  color: gold;
+}
+
+.why-choose-us .why-box {
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 18px;
+  padding: 24px 20px;
+  min-height: 210px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+  transition: 0.35s ease;
+  height: 100%;
+  text-align: center;
+}
+
+.why-choose-us .why-box i {
+  font-size: 36px;
+  color: gold;
+  margin-bottom: 14px;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.why-choose-us .why-box h5 {
+  font-weight: 800;
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.why-choose-us .why-box p {
+  font-weight: 600;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0;
+}
+
+.why-choose-us .why-box:hover {
+  transform: translateY(-8px);
+  border-color: gold;
+  box-shadow: 0 28px 60px rgba(255, 215, 0, 0.35);
+}
+
+.why-choose-us .why-box:hover i {
+  transform: scale(1.15);
+  text-shadow: 0 0 12px rgba(255, 215, 0, 0.8);
+}
+
+.why-choose-us .why-box:hover p {
+  color: #ffffff;
+}
+
+.featured-section .btn-primary:hover {
+  font-weight: bold;
+ }
+/* CTA Image Section */
+.cta-image {
+  position: relative;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../foto/download.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.75)
+  );
+  z-index: 1;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.cta-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid;
+  margin: 0 auto 20px;
+  background: rgba(255, 215, 0, 0.2);
+  color: gold;
+  font-size: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+}
+
+.pulse {
+  animation: pulseGlow 2s infinite;
+}
+
+.cta-image h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.cta-image p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+.cta-btn-big {
+  margin-top: 25px;
+  padding: 14px 38px;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  font-weight: 600;
+  background: linear-gradient(90deg, gold, #ffae00);
+  color: #000;
+  box-shadow: 0 14px 35px rgba(255, 215, 0, 0.6);
+  transition: 0.3s ease;
+}
+
+.cta-btn-big:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 22px 55px rgba(255, 215, 0, 0.85);
+  color: #000 !important;
+  font-weight: bold;
+}
+
+/* FEEDBACK NGA PERDORUESIT */
+#testimonialCarousel .row {
+  display: flex;
+}
+
+#testimonialCarousel .col-md-4 {
+  display: flex;
+}
+
+#testimonialCarousel .card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#testimonialCarousel .card p {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+/* ====================================================================
+   8. CARDS & CAR LISTINGS
+   ==================================================================== */
+
+p.text-muted.mb-4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 18px 25px;
+    border-radius: 14px;
+
+    /* Gold border */
+    border: 1px solid rgba(255, 215, 0, 0.4);
+
+    /* Gold gradient background */
+    background: linear-gradient(
+        90deg,
+        rgba(255,215,0,0.15),
+        rgba(255,215,0,0.05)
+    );
+
+    color: #111 !important;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+/* Universal Card Style */
+.card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom right,
+    rgba(38, 30, 30, 0.85),
+    rgba(0, 0, 0, 0.7)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.card-body,
+.card-footer {
+  background: transparent !important;
+  color: #fff !important;
+}
+
+.card h3,
+.card h5,
+.card p,
+.card span {
+  color: #ffffff;
+}
+
+/* Universal Data Color for Card Lists */
+.card .card-body ul li,
+.card .card-body ul li *,
+.card .card-body ul li::marker,
+.card .card-body ul li span,
+.card .card-body ul li strong,
+.card .card-body ul li small {
+  color: #ffffff !important;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.8);
+  border-color: rgba(255, 215, 0, 0.7);
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 215, 0, 0.15),
+    rgba(0, 0, 0, 0.75)
+  );
+}
+
+/* Card Text Hover to Gold */
+.card:hover h3,
+.card:hover h5,
+.card:hover .car-category,
+.card:hover .car-price {
+  color: #ffd700 !important;
+}
+
+/* Card Images */
+.card-img-top,
+.card-img-top1 {
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.car-card .card-img-top {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px 10px 0 0;
+}
+
+.cars-container .card-footer .btn:hover {
+font-weight: bold;
+}
+/* Featured Section Card Images */
+.featured-section .card img,
+.featured-section .card .card-img-top,
+.featured-section .card .card-img-top1 {
+  height: 260px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Card Icons */
+.card .bi {
+  color: #ffd700 !important;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+
+.card .d-flex > div div {
+  color: #000000 !important;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.card .text-muted {
+  color: #ffffff !important;
+}
+
+.card:hover .bi {
+  color: #ffea00 !important;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.9);
+}
+
+.card:hover .d-flex > div div {
+  color: #ffd700 !important;
+}
+
+.card h6.text-primary {
+  color: white !important;
+  font-weight: bold;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+/* Discount Badge */
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(135deg, #ffd700, #ffb800);
+  color: #000 !important;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 999px;
+  font-size: 1rem;
+}
+
+/* Glass Cards for Featured/Premium Sections */
+.featured-section .card,
+.premium-section .card {
+  background: var(--dark-glass);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  color: #fff;
+  transition: 0.3s;
+  backdrop-filter: blur(14px);
+}
+
+.featured-section .card:hover,
+.premium-section .card:hover {
+  border-color: var(--gold);
+  transform: translateY(-5px);
+}
+
+/* ====================================================================
+   9. FILTERS
+   ==================================================================== */
+
+/* Sticky Filter */
+.sticky-filter {
+  position: sticky;
+  top: 20px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 215, 0, 0.15),
+    rgba(0, 0, 0, 0.85)
+  );
+  border: 1px solid black;
+  border-radius: 16px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  padding: 18px 18px 22px;
+  transition: 0.3s ease;
+}
+
+.sticky-filter:hover {
+  border-color: rgba(255, 215, 0, 0.7);
+}
+
+#filterTitle {
+  color: #2b2828 !important;
+}
+
+.sticky-filter label,
+.sticky-filter h5,
+.sticky-filter span,
+.sticky-filter p,
+.sticky-filter h4 {
+  font-weight: bold;
+  font-size: 17px;
+  color: #000000;
+}
+
+
+.sticky-filter .row .btn:hover { 
+font-weight: bold;
+}
+.sticky-filter h4 {
+  font-weight: bold;
+  font-size: 30px;
+  color: #000000;
+}
+#priceValue,
+#yearValue,
+#seatsValue,
+#powerValue {
+  color: #000 !important;
+}
+
+.sticky-filter .form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: rgba(0, 0, 0, 0.35);
+  border-color: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='white' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 14px;
+  padding-right: 2.5rem;
+}
+
+/* Hide Scrollbar */
+.sticky-filter::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.sticky-filter {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Filter Box (Home Page) */
+.advanced-filter-box {
+  position: relative;
+  padding: 35px;
+}
+
+.advanced-filter-box label,
+.advanced-filter-box span,
+.advanced-filter-box p {
+  color: #000000;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.advanced-filter-box h4 {
+  font-size: 30px;
+  color: #000000 !important;
+}
+
+.advanced-filter-box .form-select option {
+  background: #000;
+  color: #fff;
+}
+
+.advanced-filter-box .form-label {
+  color: black;
+}
+
+.advanced-filter-box .form-select option:hover,
+.advanced-filter-box .form-select option:focus,
+.advanced-filter-box .form-select option:checked {
+  background: gold !important;
+  color: #000 !important;
+}
+
+.advanced-filter-box .form-select {
+  color-scheme: dark;
+}
+
+.advanced-filter-box .form-select,
+.premium-section .form-select {
+  appearance: none;
+  background-color: rgba(0, 0, 0, 0.35);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+  padding-right: 2.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='white' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  background-position: right 0.75rem center;
+  background-repeat: no-repeat;
+}
+
+/* Sliders (noUi) */
+.slider {
+  margin-top: 5px;
+  margin-right: 18px;
+}
+
+.noUi-target {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  height: 6px;
+}
+
+.noUi-connect {
+  background: linear-gradient(90deg, #b29f30, #ffb800);
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 18px;
+  height: 18px;
+  top: -6px;
+  border-radius: 50%;
+  background: #2e2c2c;
+  border: 2px solid #ffd700;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.45);
+}
+
+.form-label span {
+  font-weight: 600;
+  color: #03012f;
+}
+
+
+/* ====================================================================
+   10. FORMS & INPUTS
+   ==================================================================== */
+
+input.form-control,
+textarea.form-control,
+select.form-select {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.7);
+  color: #f8f9fa;
+}
+
+input.form-control:focus,
+textarea.form-control:focus,
+select.form-select:focus {
+  border-color: rgba(255, 215, 0, 0.8);
+  box-shadow: 0 0 0 1px rgba(255, 215, 0, 0.6);
+  background: rgba(0, 0, 0, 0.85);
+}
+input.form-control.is-invalid:focus {
+  background: rgba(0, 0, 0, 0.85) !important;
+  background-image: none !important;
+  padding-right: 14px !important;
+}
+
+input.form-control.is-invalid {
+  border-color: #dc3545 !important;
+  padding-right: 2.75rem !important;
+  background-repeat: no-repeat !important;
+  background-position: right 0.75rem center !important;
+  background-size: 18px 18px !important;
+}
+
+.form-control.is-invalid:focus {
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.15);
+}
+
+.field-error {
+  display: none;
+  font-size: 13px;
+  color: #dc3545;
+  margin-top: 4px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 33px;
+  cursor: pointer;
+  color: #aaa;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+input.form-control.is-invalid {
+
+  padding-right: 12px !important;
+  padding-top: 10px !important;
+}
+.password-toggle:hover {
+  color: gold;
+}
+.login-card {
+  border-radius: 16px;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.login-card h3 {
+  font-weight: 700;
+}
+
+.login-card .form-control {
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.login-card .form-control:focus {
+  border-color: gold;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.login-card .btn-primary {
+  border-radius: 10px;
+
+  font-weight: 600;
+}
+.login-error-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #2a1215 !important;
+  border: 1px solid rgba(220, 53, 69, 0.6);
+  border-left: 4px solid #dc3545;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  color: #ff6b6b !important;
+  font-size: 0.95rem;
+  font-weight: 500;
+  animation: fadeInMsg 0.3s ease;
+}
+
+.login-error-box i {
+  font-size: 1.1rem;
+  color: #ff6b6b !important;
+  flex-shrink: 0;
+}
+.login-card .form-control:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #2a2a2a inset !important;
+  -webkit-text-fill-color: #fff !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+@keyframes fadeInMsg {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.register-card {
+  border-radius: 16px;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  background: #1a1a1a !important;
+  color: #fff;
+}
+
+.register-card h3,
+.register-card label,
+.register-card p,
+.register-card a {
+  color: #fff !important;
+}
+
+.register-card h3 {
+  font-weight: 700;
+}
+
+.register-card .form-control {
+  border-radius: 10px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff !important;
+}
+
+.register-card .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.register-card .form-control:focus {
+  border-color: gold;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.register-card .form-control.is-invalid {
+  border: 2px solid #d11313cd !important;
+  background: rgba(255, 0, 0, 0.08);
+  box-shadow: 0 0 8px rgba(220, 53, 69, 0.4);
+}
+
+.register-card .form-control:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #2a2a2a inset !important;
+  -webkit-text-fill-color: #fff !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.register-card .btn-primary {
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.register-error-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #2a1215 !important;
+  border: 1px solid rgba(220, 53, 69, 0.6);
+  border-left: 4px solid #dc3545;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  color: #820f0f !important;
+  font-size: 0.95rem;
+  font-weight: 500;
+  animation: fadeInMsg 0.3s ease;
+}
+
+.register-error-box i {
+  font-size: 1.1rem;
+  color: #ae1919 !important;
+  flex-shrink: 0;
+}
+.register-card .form-control.is-invalid {
+  background-image: none !important;
+}
+
+@keyframes fadeInMsg {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+/* ====================================================================
+   11. BUTTONS
+   ==================================================================== */
+
+.btn-primary,
+.btn-light,
+.btn-success {
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease,
+    color 0.25s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ffd700, #ffb800);
+  border-color: #ffca2c;
+  color: #000;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px) scale(1.03);
+  box-shadow: 0 14px 30px rgba(255, 215, 0, 0.45);
+  color: #000;
+  border-color: #95910c;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #00c853, #00e676);
+  border: none;
+}
+
+.btn-success:hover {
+  box-shadow: 0 14px 30px rgba(0, 200, 83, 0.45);
+}
+
+.btn-light {
+  background: rgba(0, 0, 0, 0.4);
+  color: #f8f9fa;
+  border-color: rgba(255, 255, 255, 0.09);
+}
+
+.btn-light:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Gold Button */
+.gold-btn {
+  background: linear-gradient(90deg, gold, #ffae00);
+  border-radius: 100px;
+  color: #000 !important;
+  font-weight: 500;
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+  transition: 0.3s ease;
+}
+
+.gold-btn:hover {
+  font-weight: bolder;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(255, 215, 0, 0.65);
+}
+
+/* Premium Outline Button */
+.btn-premium-outline {
+  box-shadow: 0 10px 10px rgba(255, 215, 0, 0.4);
+  background: linear-gradient(90deg, gold, #ffae00) !important;
+  border-radius: 50px;
+  padding: 7px 7px;
+  border: 1px solid gold;
+  color: black;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: 0.3s ease;
+}
+
+.btn-premium-outline:hover {
+  color: black !important;
+  transform: translateY(-3px);
+  box-shadow: 0 20px 20px rgba(255, 215, 0, 0.4);
+}
+
+/* Disabled Button */
+.btn-disabled {
+  background-color: #555 !important;
+  border-color: #555 !important;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* Flex Button Styling */
+.d-flex .btn {
+  min-width: 180px;
+  text-align: center;
+}
+
+.btn-primary {
+    color: black !important;
+}
+.btn-hover-bold:hover {
+    font-weight: bold;
+}
+
+.btn :hover{
+font-weight: bold;
+}
+/* ====================================================================
+   12. MODALS & POPUPS
+   ==================================================================== */
+
+/* Booking Modal */
+#bookingModal .modal-dialog {
+  max-width: 520px;
+}
+
+#bookingModal .modal-content {
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 24px 26px;
+  color: white;
+  transition: 0.3s ease;
+}
+
+#bookingModal .modal-content:hover {
+  border: 1px solid gold;
+  box-shadow: 0 30px 70px rgba(255, 215, 0, 0.35);
+  transform: translateY(-3px);
+}
+
+#bookingModal h5 {
+  font-weight: 800;
+  color: gold !important;
+}
+
+#bookingModal label {
+  color: white;
+  font-weight: 600;
+}
+
+#bookingModal .form-control,
+#bookingModal .form-check-input {
+  background: rgba(255, 255, 255, 0.08);
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+#bookingModal .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#bookingModal .form-control:focus {
+  border: 1px solid gold;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.3);
+}
+
+#bookingModal .form-check-label {
+  color: white;
+}
+
+#bookingModal .btn {
+  border-radius: 14px;
+  height: 45px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+#bookingModal .btn-secondary {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+}
+
+#bookingModal .btn-primary {
+  background: linear-gradient(45deg, gold, rgb(208, 181, 56));
+  border: none;
+  color: black;
+}
+
+#bookingModal .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgb(173, 154, 43);
+}
+
+#bookingModal .form-control.is-invalid {
+  border: 2px solid #ff3b3b !important;
+  background: rgba(255, 0, 0, 0.08);
+  box-shadow: 0 0 8px rgba(220, 53, 69, 0.4);
+}
+
+#bookingModal .form-control.is-invalid:focus {
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.5);
+}
+
+#bookingModal .is-invalid + .field-error,
+#bookingModal label.error-label {
+  color: #ff3b3b !important;
+}
+
+#bookingModal .form-check-input {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
+}
+
+#bookingModal .form-check-input:focus {
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+  border-color: gold;
+}
+
+#bookingModal .form-check-input:checked {
+  background-color: rgb(0, 111, 17);
+  border-color: rgb(213, 198, 109);
+}
+
+#bookingModal .form-check-label {
+  cursor: pointer;
+}
+
+.field-error {
+  color: #ff3b3b !important;
+  font-weight: 600;
+}
+
+#bookingCarName {
+  color: #000 !important;
+}
+
+#bookingCarImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Success Modal */
+#successModal .modal-content {
+  border-radius: 16px;
+  border: none;
+  background: linear-gradient(135deg, #f8f9fa, #ffffff);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  animation: successPop 0.35s ease;
+}
+
+#successModal h4 {
+  color: #198754;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+#successModal p {
+  color: #555;
+  font-size: 15px;
+}
+
+#successModal #bookingRef {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 8px 14px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #0d6efd;
+  background: #eef3ff;
+  border-radius: 8px;
+}
+
+#successModal .btn-primary {
+  margin-top: 15px;
+  border-radius: 30px;
+  padding: 8px 28px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+  border: none;
+  box-shadow: 0 6px 15px rgba(13, 110, 253, 0.4);
+}
+
+#successModal .btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(13, 110, 253, 0.55);
+}
+
+#successModal::before {
+  content: "✓";
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 70px;
+  background: #198754;
+  color: #fff;
+  font-size: 38px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(25, 135, 84, 0.5);
+}
+
+/* Contact Success Modal */
+#contactSuccessModal .modal-dialog {
+  max-width: 520px;
+}
+
+#contactSuccessModal .modal-content {
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 24px 26px;
+  color: white;
+  transition: 0.3s ease;
+}
+
+#contactSuccessModal .modal-content:hover {
+  border: 1px solid gold;
+  box-shadow: 0 30px 70px rgba(255, 215, 0, 0.35);
+  transform: translateY(-3px);
+}
+
+#contactSuccessModal h5 {
+  font-weight: 800;
+  color: gold !important;
+}
+
+#contactSuccessModal .success-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto;
+  background: rgba(255, 215, 0, 0.15);
+  color: gold;
+  font-size: 38px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.25);
+}
+
+#contactSuccessModal p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+#contactSuccessModal .text-muted {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+#contactSuccessModal .btn {
+  border-radius: 14px;
+  height: 45px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+#contactSuccessModal .btn-primary {
+  background: linear-gradient(45deg, gold, rgb(208, 181, 56));
+  border: none;
+  color: black;
+}
+
+#contactSuccessModal .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgb(173, 154, 43);
+}
+
+#contactSuccessModal.modal.fade .modal-dialog {
+  transform: scale(0.92);
+  transition: transform 0.25s ease-out;
+}
+
+#contactSuccessModal.modal.show .modal-dialog {
+  transform: scale(1);
+}
+
+/* Map Section */
+.map-section {
+  padding: 0;
+  background: transparent;
+  width: 100%;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .map-container {
+    height: 450px;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-container {
+    height: 400px;
+  }
+}
+/* ====================================================================
+   13. BOOKING COMPONENTS
+   ==================================================================== */
+
+/* Booking Reference Box */
+.booking-ref-box {
+  background: #000000;
+  padding: 26px 28px 22px;
+  border-radius: 18px;
+  text-align: center;
+  max-width: 440px;
+  margin: 30px auto;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.18);
+}
+
+.ref-label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #6c757d;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.booking-ref {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  padding: 14px 24px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #0d6efd, #084298);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.25s ease;
+}
+
+.booking-ref::after {
+  content: "📋";
+  font-size: 18px;
+  opacity: 0.85;
+}
+
+.booking-ref:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(13, 110, 253, 0.45);
+}
+
+.booking-ref:active {
+  transform: scale(0.97);
+}
+
+.copy-msg {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #6c757d;
+  font-weight: 500;
+  transition: 0.25s;
+}
+
+.copy-msg.success {
+  color: #198754;
+  font-weight: 700;
+}
+
+/* Booking Success Page */
+.booking-success-page .btn i,
+.booking-success-page .btn .bi {
+  color: #000 !important;
+}
+
+.booking-success-page:hover .btn i,
+.booking-success-page:hover .btn .bi {
+  color: #000 !important;
+}
+
+/* Booking Fixed Panel */
+.booking-fixed {
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
+  color: white;
+  transition: 0.3s ease-in-out;
+  position: sticky;
+  top: 90px;
+  margin-bottom: 80px;
+  padding: 18px 18px 22px;
+  animation: floatCard 6s ease-in-out infinite;
+}
+
+.booking-fixed:hover {
+  transform: translateY(-4px);
+  border: 1px solid gold !important;
+  box-shadow: 0 25px 55px rgba(255, 215, 0, 0.35);
+}
+
+.booking-fixed .form-control {
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: white;
+}
+
+.booking-fixed .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.booking-spacer {
+  height: 500px;
+}
+
+#bookingCarPrice {
+  display: none;
+}
+
+/* Availability Text */
+.availability-text {
+  font-weight: 600;
+}
+
+.availability-available {
+  color: #198754;
+}
+
+.availability-unavailable {
+  color: #dc3545;
+}
+
+/* Print Styles */
+@media print {
+  nav,
+  footer,
+  .no-print {
+    display: none;
+  }
+}
+
+/* ====================================================================
+   14. AUTHENTICATION PAGES (Login, Signup)
+   ==================================================================== */
+
+/* Login Card */
+.login-card {
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: 0.3s ease;
+}
+
+.login-card:hover {
+  border: 1px solid gold;
+  box-shadow: 0 30px 70px rgba(255, 215, 0, 0.35);
+  transform: translateY(-4px);
+}
+
+.login-card .form-label {
+  color: white;
+  font-weight: 600;
+}
+
+.login-card .form-control {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  height: 48px;
+}
+
+.login-card .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.login-card .form-control:focus {
+  border: 1px solid gold;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.3);
+}
+
+.login-card button {
+  background: linear-gradient(45deg, gold, rgb(208, 181, 56));
+  border: none;
+  color: black;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 12px;
+  height: 35px;
+  transition: 0.3s ease;
+}
+
+.login-card button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgb(163, 150, 72);
+}
+
+.login-card p {
+  color: white;
+}
+
+.login-card a {
+  color: gold;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.login-card a:hover {
+  font-weight: 750;
+  text-decoration: none;
+}
+
+/* Login Error Box */
+.login-error-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fdecea;
+  color: #b3261e;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #f5c2c7;
+}
+
+.login-error-box i {
+  font-size: 18px;
+}
+
+/* Register Card */
+.register-card {
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: 0.3s ease;
+  color: white;
+}
+
+.register-card:hover {
+  border: 1px solid gold;
+  box-shadow: 0 30px 70px rgba(255, 215, 0, 0.35);
+  transform: translateY(-4px);
+}
+
+.register-card h3,
+.register-card label,
+.register-card p,
+.register-card span {
+  color: #fff;
+}
+
+.register-card .form-label {
+  color: white;
+  font-weight: 600;
+}
+
+.register-card .form-control {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  height: 35px;
+}
+
+.register-card .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.register-card .form-control:focus {
+  border: 1px solid gold;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.3);
+}
+
+.register-card button {
+  background: linear-gradient(45deg, gold, rgb(208, 181, 56));
+  border: none;
+  color: black;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 12px;
+  height: 50px;
+  transition: 0.3s ease;
+}
+
+.register-card button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgb(173, 154, 43);
+}
+
+.register-card p {
+  color: white;
+}
+
+.register-card a {
+  color: gold;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.register-card a:hover {
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+
+/* ====================================================================
+   15. CAR DETAILS PAGE
+   ==================================================================== */
+
+/* Remove Box Background from Main Container */
+.container.my-5 {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0;
+}
+
+/* Headings */
+h5 {
+  color: gold !important;
+}
+
+/* Main Image */
+#mainImage {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Car Specs Box */
+.car-spec-box {
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  padding: 20px 14px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  max-width: 750px;
+  margin: 0 auto 18px;
+  box-shadow: 0 16px 40px rgba(133, 120, 46, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transition: 0.3s ease;
+}
+
+.booking-page .car-spec-box {
+  margin-top: 25px;
+}
+
+.car-spec-box .spec-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.car-spec-box i {
+  color: gold !important;
+  font-size: 1.7rem !important;
+}
+
+.car-spec-box p {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.car-spec-box:hover {
+  transform: translateY(-6px);
+  border-color: gold !important;
+  box-shadow: 0 22px 45px rgba(114, 102, 28, 0.35);
+}
+
+.car-spec-box:hover i {
+  color: gold !important;
+}
+
+.car-spec-box:hover p {
+  color: gold;
+  opacity: 0.95;
+}
+
+/* Universal Headers in Cards/Boxes */
+.card h2,
+.card h3,
+.card h4,
+.card h5,
+.car-spec-box h3,
+.car-spec-box h4,
+.car-spec-box h5 {
+  color: gold !important;
+  font-size: 1.8rem !important;
+  font-weight: 500 !important;
+}
+
+.car-spec-box h4 {
+  font-size: 1.6rem !important;
+}
+
+
+.price-details li {
+  list-style: none;
+  font-size: 1.05rem;
+}
+
+/* Text in Cards/Boxes */
+.card p,
+.card small,
+.car-spec-box p {
+  color: #fff !important;
+  font-size: 0.95rem !important;
+  opacity: 0.95;
+}
+
+.col-md-7 h2{
+  color: black;
+}
+/* Feature Icons */
+.feature-icon {
+  padding: 3px 0;
+}
+
+.feature-icon i {
+  font-size: 18px !important;
+  margin-bottom: 1px;
+  color: gold !important;
+}
+
+.feature-icon p {
+  font-weight: 600;
+  color: white;
+}
+
+/* Specs Row */
+.row.text-center {
+  --bs-gutter-x: 6px;
+  --bs-gutter-y: 6px;
+  margin-bottom: 24px;
+}
+
+#bookBtn:hover{
+  font-weight: bold;
+
+}
+
+/* Glass Cards */
+.card {
+  background: rgba(0, 0, 0, 0.55) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: white !important;
+}
+
+.card h5 {
+  color: rgb(255, 255, 255) !important;
+}
+.availability-available,
+.availability-unavailable {
+  font-size: 1.3rem;
+}
+
+/* ========================================
+   EXTRAS SECTION
+   ======================================== */
+
+/* Extras list container */
+.extras-list {
+
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Individual extra item */
+.extras-list .form-check {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.extras-list .hover-bg:hover {
+  background: rgba(255, 215, 0, 0.1);
+}
+
+/* Checkbox styling */
+.extra-checkbox {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+.extra-checkbox:checked {
+  background-color: #ffd700;
+  border-color: #ffd700;
+}
+
+/* Icons in extras */
+.extras-list i {
+  font-size: 1.1rem;
+}
+
+/* Badge for price */
+.extras-list .badge {
+  font-weight: 600;
+  padding: 6px 12px;
+}
+#extrasToggleBtn {
+  border-color: #D4AF37;
+  color: #D4AF37;
+}
+
+#extrasToggleBtn:hover {
+  background-color: #D4AF37;
+  color: white;
+}
+/* Price breakdown section */
+.price-breakdown {
+ 
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.price-breakdown p {
+ 
+  margin-bottom: 8px;
+}
+
+.price-breakdown hr {
+  margin: 12px 0;
+ 
+}
+.price-label {
+  font-size: 1.1rem !important;
+}
+
+.price-value {
+  font-size: 1.1rem !important;
+}
+
+.price-total {
+  font-size: 1.3rem !important;
+  color: #bf9413 !important;
+}
+/* Extras summary in modal */
+#extrasSummary {
+
+  padding: 12px;
+  border-radius: 8px;
+
+}
+
+#extrasListModal {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+#extrasListModal li {
+  padding: 4px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .extras-list .form-check {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  
+  .extras-list .badge {
+    margin-top: 5px;
+    align-self: flex-start;
+  }
+}
+
+/* Animation for extras row appearing */
+#extrasRow {
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Highlight total price */
+.price-breakdown .fs-5 {
+
+  padding: 12px;
+  border-radius: 8px;
+  margin: 0 -15px;
+  margin-top: 10px;
+}
+
+.price-breakdown .fs-5 .text-primary {
+  color: #000 !important;
+  font-size: 1.5rem;
+}
+
+/* Toggle Button Styling */
+#extrasToggleBtn {
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+.ekstra {
+  color: #f0a500 !important;  
+  font-size: 1.1rem;
+}
+#availabilityStatus{
+  font-size: 1.2rem;
+}
+#extrasToggleBtn:hover {
+  background-color: rgba(255, 215, 0, 0.1);
+  border-color: #ffd700;
+}
+
+#extrasToggleBtn[aria-expanded="true"] {
+  background-color: rgba(255, 215, 0, 0.15);
+  border-color: #ffd700 !important;
+}
+
+/* Chevron Animation */
+#extrasChevron {
+  transition: transform 0.3s ease;
+}
+
+/* Smooth collapse animation */
+.collapse {
+  transition: height 0.35s ease;
+}
+
+/* Extras list appears with fade */
+#extrasCollapse .extras-list {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ====================================================================
+   16. CONTACT PAGE
+   ==================================================================== */
+
+.contact-section {
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 215, 0, 0.18),
+    rgba(0, 0, 0, 0.92)
+  );
+  padding: 90px 0;
+  color: #fff;
+}
+
+.contact-section h1,
+.contact-section h2,
+.contact-section p{
+  color:#000000 !important;
+}
+.lead {
+  font-weight: bold;
+}
+.contact-section label {
+  font-size: 18px;
+  font-weight: bold;
+  color:#000000 !important;
+}
+.contact-section .form-control {
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #fff !important;
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+.contact-section .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.contact-section .form-control:focus {
+  border-color: gold;
+  box-shadow: 0 0 14px rgba(255, 215, 0, 0.7);
+}
+
+.contact-section .btn-primary {
+  background: linear-gradient(90deg, gold, #ffae00);
+  color: #000;
+  font-weight: 700;
+  border: none;
+  border-radius: 80px;
+  padding: 12px 26px;
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+  transition: 0.3s ease;
+}
+
+.contact-section .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(255, 215, 0, 0.7);
+}
+
+.contact-section .text-center,
+.contact-section h1,
+.contact-section h2,
+.contact-section p {
+  text-align: center !important;
+}
+
+/* Map Section */
+.map-section {
+  margin-top: 40px;
+}
+
+.map-section iframe {
+  display: block;
+  width: 100%;
+  height: 350px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* ====================================================================
+   17. ABOUT US PAGE
+   ==================================================================== */
+.about-wrapper {
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 215, 0, 0.18),
+    rgba(0, 0, 0, 0.92)
+  );
+  padding: 90px 0;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.4rem !important; /* shto këtë */
+}
+
+.about-wrapper h1,
+.about-wrapper h2,
+.about-wrapper h3,
+.about-wrapper h5,
+.about-wrapper p,
+.about-wrapper label {
+  color: #000000 !important;
+}
+
+.about-wrapper .section-label {
+  color: #b8860b;
+}
+
+.about-wrapper .section-label::after {
+  background: #b8860b;
+}
+
+/* ── HERO ── */
+.about-hero {
+  position: relative;
+  padding: 60px 0 50px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.about-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+  margin-bottom: 28px;
+}
+
+.about-hero p {
+  font-size: 1.15rem;
+  color: #333 !important;
+  max-width: 780px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.hero-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, gold, transparent);
+  margin: 40px auto 0;
+}
+/* HERO */
+.about-hero p {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* MISSION & TRUST - frame cards */
+.frame-card p {
+  font-size: 1.4rem;
+}
+
+/* STATS */
+.stat-item p {
+  font-size: 1.4rem;
+}
+
+/* CATEGORIES */
+.cat-card p {
+  font-size: 1.4rem;
+}
+
+/* HOW IT WORKS */
+.step-card p {
+  font-size: 1.4rem;
+}
+/* ── FRAME CARD ── */
+.frame-section {
+  padding: 60px 0;
+}
+
+.frame-card {
+  position: relative;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 14px;
+  padding: 56px 60px;
+  overflow: hidden;
+  transition: border-color .4s;
+}
+
+.frame-card:hover {
+  border-color: gold;
+  box-shadow: 0 0 14px rgba(255, 215, 0, 0.7);
+}
+
+.frame-card::before {
+  display: none;
+}
+
+.frame-card .corner {
+  display: none;
+}
+
+.frame-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color:gold !important;
+  margin-bottom: 20px;
+}
+
+.frame-card p {
+  color: rgba(255, 255, 255, 0.85) !important;
+  line-height: 1.85;
+  font-size: 1.1rem; /* ishte 1rem */
+  margin-bottom: 14px;
+}
+
+/* ── STATS ── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+@media(max-width:768px) { .stats-grid { grid-template-columns: repeat(2,1fr); } }
+
+.stat-item {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 44px 24px;
+  text-align: center;
+  transition: background .3s;
+}
+
+.stat-item:hover {
+  background: rgba(0, 0, 0, 0.65);
+  box-shadow: 0 0 14px rgba(255, 215, 0, 0.4);
+}
+
+.stat-item h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: gold !important;
+  -webkit-text-fill-color: gold !important;
+  margin-bottom: 8px;
+  line-height: 1;
+}
+
+.stat-item p {
+  color: rgba(255,255,255,0.85) !important;
+  font-size: .85rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* ── CATEGORY CARDS ── */
+.cat-card {
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 14px;
+  padding: 40px 32px;
+  text-align: center;
+  height: 100%;
+  transition: border-color .3s, transform .3s, box-shadow .3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.cat-card::after {
+  display: none;
+}
+
+.cat-card:hover {
+  border-color: gold;
+  transform: translateY(-4px);
+  box-shadow: 0 0 14px rgba(255, 215, 0, 0.7);
+}
+
+
+.cat-card h5 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color:gold !important;
+  margin-bottom: 12px;
+}
+
+.cat-card p {
+  color: rgba(255,255,255,0.85) !important;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── HOW IT WORKS ── */
+.steps-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+@media(max-width:768px) { .steps-wrapper { grid-template-columns: 1fr; } }
+
+.steps-wrapper .step-card + .step-card {
+  border-left: 1px solid rgba(255,255,255,0.15);
+}
+
+@media(max-width:768px) {
+  .steps-wrapper .step-card + .step-card { border-left: none; border-top: 1px solid rgba(255,255,255,0.15); }
+}
+
+.step-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: rgba(255, 215, 0, 0.3) !important;
+  -webkit-text-fill-color: rgba(255, 215, 0, 0.3) !important;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.step-card h5 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: gold !important;
+  margin-bottom: 10px;
+}
+.step-card {
+  padding: 30px 32px; /* ndrysho 48px sipas dëshirës */
+}
+.step-card p {
+  color: rgba(255,255,255,0.85) !important;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── SECTION TITLE ── */
+.section-title {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: #000 !important;
+  margin-bottom: 16px;
+}
+
+.title-line {
+  width: 48px;
+  height: 2px;
+  background: gold;
+  margin: 0 auto 48px;
+  opacity: .7;
+}
+
+
+/* ====================================================================
+   17. SUCCESS PAGES
+   ==================================================================== */
+
+/* Featured Section Buttons */
+.featured-section .btn-primary {
+  background: gold;
+  border: none;
+  color: #000;
+  font-weight: 600;
+}
+
+.featured-section .btn-primary:hover {
+  background: #ffd84d;
+}
+
+
+/* ====================================================================
+   18. TESTIMONIALS & CAROUSEL
+   ==================================================================== */
+
+/* Carousel Controls */
+#testimonialCarousel .carousel-inner {
+  overflow: visible;
+}
+
+#testimonialCarousel .card {
+  position: relative;
+  z-index: 3;
+}
+
+#testimonialCarousel .carousel-control-prev {
+  left: -80px;
+}
+
+#testimonialCarousel .carousel-control-next {
+  right: -80px;
+}
+
+#testimonialCarousel .carousel-control-prev-icon,
+#testimonialCarousel .carousel-control-next-icon {
+  background-size: 40%;
+  width: 55px;
+  height: 55px;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+}
+
+#testimonialCarousel .carousel-control-prev-icon:hover,
+#testimonialCarousel .carousel-control-next-icon:hover {
+  transform: scale(1.1);
+}
+
+/* General Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 55px !important;
+  height: 55px !important;
+  border-radius: 50% !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: brightness(1.2);
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: gold !important;
+}
+
+/* Fade Effects */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+
+/* ====================================================================
+   19. COMPANY BRANDING
+   ==================================================================== */
+
+.company-section {
+  border-left: 4px solid #f5b301;
+  background: #fafafa;
+}
+
+.company-logo {
+  flex-shrink: 0;
+  width: 64px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 6px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.company-section:hover .company-logo {
+  transform: scale(1.06);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  border-color: #e6e60e;
+}
+
+.company-section:hover {
+  background: #f6f6f6;
+}
+
+/* Company Inline */
+.company-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #666;
+}
+
+.company-logo-inline {
+  width: 65px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  padding: 4px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.company-inline:hover .company-logo-inline {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  border-color: #e6e60e;
+}
+
+.company-name-inline {
+  font-weight: 600;
+  white-space: nowrap;
+  line-height: 1;
+  color: #222;
+}
+
+
+/* ====================================================================
+   20. FOOTER
+   ==================================================================== */
+
+footer {
+  background: #000;
+  color: #f8f9fa;
+  border-top: 1px solid rgba(255, 215, 0, 0.25);
+}
+
+footer h5 {
+  color: #ffd700;
+}
+
+.footer-link {
+  color: #e9ecef;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-link:hover {
+  color: #ffd700 !important;
+  transform: translateY(-2px);
+}
+
+footer a {
+  text-decoration: none;
+  color: #f8f9fa !important;
+}
+
+footer a:hover {
+  color: #ffd700 !important;
+}
+
+/* ====================================================================
+   21. ANIMATIONS
+   ==================================================================== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatCard {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 45px rgba(255, 215, 0, 1);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+  }
+}
+
+@keyframes successPop {
+  0% {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* ====================================================================
+   22. RESPONSIVE DESIGN
+   ==================================================================== */
+
+/* Tablet (992px and below) */
+@media (max-width: 992px) {
+  header.hero h1 {
+    font-size: 2.4rem;
+  }
+
+  header.hero p.lead {
+    font-size: 1rem;
+  }
+
+  .booking-fixed {
+    position: static;
+    margin-top: 24px;
+    animation: none;
+  }
+
+  .booking-spacer {
+    display: none;
+  }
+
+  .why-choose-us .why-box {
+    min-height: auto;
+    padding: 22px 18px;
+  }
+}
+
+/* Mobile Landscape & Small Tablets (768px and below) */
+@media (max-width: 768px) {
+  .hero form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .partner-logo {
+    width: 140px;
+    margin: 15px;
+  }
+
+  #mainImage {
+    height: 300px;
+  }
+
+  .cta-image {
+    height: 70vh;
+  }
+
+  .cta-image h2 {
+    font-size: 2.2rem;
+  }
+
+  .qr-side-wrapper {
+    width: 120px;
+    margin-left: 0;
+    margin-top: 8px;
+  }
+
+  #testimonialCarousel .carousel-control-prev {
+    left: -30px;
+  }
+
+  #testimonialCarousel .carousel-control-next {
+    right: -30px;
+  }
+
+  #testimonialCarousel .carousel-control-prev-icon,
+  #testimonialCarousel .carousel-control-next-icon {
+    width: 45px;
+    height: 45px;
+  }
+}
+/* Mobile Portrait (576px and below) */
+@media (max-width: 576px) {
+  header.hero {
+    padding-top: 110px;
+  }
+
+  header.hero h1 {
+    font-size: 2rem;
+  }
+
+  .card {
+    margin-bottom: 12px;
+  }
+
+  .why-choose-us .why-box {
+    padding: 20px 16px;
+  }
+
+  .why-choose-us .why-box i {
+    font-size: 32px;
+  }
+
+  .why-choose-us .why-box p {
+    font-size: 0.92rem;
+  }
+}
+

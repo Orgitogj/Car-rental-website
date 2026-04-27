@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% block title %}{% trans "About Us" %}{% endblock %}
+{% block content %}
+
+<div class="about-wrapper">
+
+  <!-- HERO -->
+  <section class="about-hero">
+    <div class="container">
+      <h1>{% trans "About FastCar Rentals" %}</h1>
+      <p>{% trans "FastCar Rentals is a modern car rental marketplace that brings together trusted rental companies and hundreds of vehicles into one simple, transparent, and secure booking platform." %}</p>
+      <div class="hero-divider"></div>
+    </div>
+  </section>
+
+  <!-- MISSION -->
+  <section class="frame-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="frame-card">
+            <span class="corner corner-tl"></span>
+            <span class="corner corner-tr"></span>
+            <span class="corner corner-bl"></span>
+            <span class="corner corner-br"></span>
+            <h2>{% trans "Our Mission" %}</h2>
+            <p>{% trans "Our mission is to make car rental simple, reliable, and accessible. We believe customers should be able to compare cars, prices, and rental companies easily, without hidden fees or complicated processes." %}</p>
+            <p style="margin-bottom:0">{% trans "By partnering with verified rental companies, we ensure that every vehicle listed on our platform meets quality and safety standards." %}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="frame-section" style="padding-top:0">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">{% trans "A Growing Rental Marketplace" %}</h2>
+        <div class="title-line"></div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <h3>500+</h3>
+          <p>{% trans "Cars Available" %}</p>
+        </div>
+        <div class="stat-item">
+          <h3>50+</h3>
+          <p>{% trans "Rental Companies" %}</p>
+        </div>
+        <div class="stat-item">
+          <h3>15+</h3>
+          <p>{% trans "Cities Covered" %}</p>
+        </div>
+        <div class="stat-item">
+          <h3>10K+</h3>
+          <p>{% trans "Successful Bookings" %}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="frame-section" style="padding-top:0">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">{% trans "Cars for Every Journey" %}</h2>
+        <div class="title-line"></div>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="cat-card">
+            <h5>{% trans "Economy & City Cars" %}</h5>
+            <p>{% trans "Affordable and efficient vehicles for everyday driving." %}</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="cat-card">
+            <h5>{% trans "Family Cars & SUVs" %}</h5>
+            <p>{% trans "Spacious and comfortable cars for families and long trips." %}</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="cat-card">
+            <h5>{% trans "Luxury & Premium Vehicles" %}</h5>
+            <p>{% trans "High-end cars for business travel and special occasions." %}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="frame-section" style="padding-top:0">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">{% trans "How It Works" %}</h2>
+        <div class="title-line"></div>
+      </div>
+      <div class="steps-wrapper">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <h5>{% trans "Search" %}</h5>
+          <p>{% trans "Choose your location, dates, and car type." %}</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <h5>{% trans "Compare" %}</h5>
+          <p>{% trans "View offers from multiple rental companies." %}</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <h5>{% trans "Book" %}</h5>
+          <p>{% trans "Reserve your car with transparent pricing and instant confirmation." %}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="frame-section" style="padding-top:0; padding-bottom:100px">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="frame-card">
+            <span class="corner corner-tl"></span>
+            <span class="corner corner-tr"></span>
+            <span class="corner corner-bl"></span>
+            <span class="corner corner-br"></span>
+            <h2>{% trans "Trust & Transparency" %}</h2>
+            <p>{% trans "All rental companies on FastCar Rentals are carefully verified. Vehicles are inspected regularly, and pricing is always shown clearly before booking." %}</p>
+            <p style="margin-bottom:0">{% trans "Our platform is designed to protect customer data and ensure secure payments at every step." %}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+{% endblock %}

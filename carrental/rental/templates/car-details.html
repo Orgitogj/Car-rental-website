@@ -1,0 +1,430 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}
+{{ car.name }} – {% trans "Details" %}
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+  <div class="row g-4">
+
+    <!-- Info rreth makines -->
+    <div class="col-md-7">
+
+      <h2 id="carName">{{ car.name }}</h2>
+
+      {% if car.images.all %}
+      <div id="carGallery" class="carousel slide mb-4" data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+          {% for img in car.images.all %}
+            <button type="button"
+                    data-bs-target="#carGallery"
+                    data-bs-slide-to="{{ forloop.counter0 }}"
+                    class="{% if forloop.first %}active{% endif %}">
+            </button>
+          {% endfor %}
+        </div>
+
+        <div class="carousel-inner">
+          {% for img in car.images.all %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+              <img src="{{ img.image.url }}"
+                   class="d-block w-100 rounded shadow"
+                   style="height:420px; object-fit:cover;">
+            </div>
+          {% endfor %}
+        </div>
+
+        <button class="carousel-control-prev" data-bs-target="#carGallery" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" data-bs-target="#carGallery" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+      {% endif %}
+
+      <!-- SPECS OF THE CARS -->
+      <div class="car-spec-box">
+        <div class="spec-item">
+          <i class="bi bi-speedometer2"></i>
+          <p>{{ car.engine_size }}</p>
+        </div>
+        <div class="spec-item">
+          <i class="bi bi-people"></i>
+          <p>{{ car.seats }}</p>
+        </div>
+        <div class="spec-item">
+          <i class="bi bi-calendar"></i>
+          <p>{{ car.year }}</p>
+        </div>
+        <div class="spec-item">
+          <i class="bi bi-gear"></i>
+          <p>{{ car.gear }}</p>
+        </div>
+        <div class="spec-item">
+          <i class="bi bi-fuel-pump"></i>
+          <p>{{ car.fuel }}</p>
+        </div>
+      </div>
+
+      <!-- PRICE -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5>{% trans "Prices Table" %}</h5>
+
+          <h3 class="price-heading">
+            €{{ car.price_per_day }}
+            <small class="text-muted">{% trans "/ per day" %}</small>
+          </h3>
+
+          <ul class="mt-3 small price-details">
+            <li>{% trans "Deposit" %}: <strong>€500</strong></li>
+            <li>{% trans "Minimum Rent" %}: <strong>3 {% trans "days" %}</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- DESCRIPTION -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5>{% trans "Description" %}</h5>
+          <p>
+            {{ car.name }}
+            {% trans "is a premium vehicle offering comfort, performance and reliability. Perfect for travel and city experience." %}
+          </p>
+        </div>
+      </div>
+
+      <!-- COMPANY INFO -->
+      <div class="card mb-4 company-section">
+        <div class="card-body d-flex align-items-start gap-3">
+
+          {% if car.company.logo %}
+            <img
+              src="{{ car.company.logo.url }}"
+              alt="{{ car.company.name }}"
+              class="company-logo">
+          {% endif %}
+
+          <div>
+            <h5 class="mb-1">{{ car.company.name }}</h5>
+
+            <p class="text-muted small mb-0">
+              {{ car.company.description }}
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- INSURANCE -->
+      <div class="card mb-4 border-success">
+        <div class="card-body">
+          <h5 class="text-success">{% trans "Insurance" %}</h5>
+          <p>{% trans "This car includes full insurance and roadside assistance." %}</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Vazhdimi i rezervimit-->
+    <div class="col-md-5">
+      <div class="booking-fixed card p-3">
+
+        <input type="hidden" id="carId" value="{{ car.id }}">
+        <input type="hidden" id="pricePerDay" value="{{ car.price_per_day }}">
+        <input type="hidden" id="minRent" value="3">
+
+        <!-- TRANSLATIONS PER JAVASCRIPT -->
+        <input type="hidden" id="textSelectDates" value="{% trans 'Please select the dates' %}">
+        <input type="hidden" id="textMinDays" value="{% trans 'Minimum' %}">
+        <input type="hidden" id="textDaysRequired" value="{% trans 'days required' %}">
+        <input type="hidden" id="textConfirmBooking" value="{% trans 'Confirm Booking' %}">
+        <input type="hidden" id="textAvailable" value="{% trans 'Available' %}">
+        <input type="hidden" id="textUnavailable" value="{% trans 'Unavailable' %}">
+        <input type="hidden" id="textSelectReturn" value="{% trans 'Select return date' %}">
+        <input type="hidden" id="textCheckingAvailability" value="{% trans 'Checking availability...' %}">
+        <input type="hidden" id="textSelectDatesToCheck" value="{% trans 'Select dates to check availability' %}">
+        <input type="hidden" id="textError" value="{% trans 'Error checking availability' %}">
+        <input type="hidden" id="textNameMin" value="{% trans 'Name must be at least 3 characters' %}">
+        <input type="hidden" id="textPhoneInvalid" value="{% trans 'Please enter a valid phone number' %}">
+        <input type="hidden" id="textEmailInvalid" value="{% trans 'Please enter a valid email address' %}">
+        <input type="hidden" id="textPhoneMin" value="{% trans 'Phone number must be at least 10 digits' %}">
+
+        <h4>{% trans "Book This Car" %}</h4>
+
+        <div class="mb-3">
+          <label>{% trans "Pick-up Location" %}</label>
+          <input class="form-control" value="{% trans 'Tirana Airport' %}" readonly>
+        </div>
+
+        <div class="mb-3">
+          <label>{% trans "Return Location" %}</label>
+          <input class="form-control" value="{% trans 'Tirana Airport' %}" readonly>
+        </div>
+
+        <div class="mb-3">
+          <label>{% trans "Pick-up Date" %}</label>
+          <input type="date" id="pickupDate" class="form-control">
+        </div>
+
+        <div class="mb-3">
+          <label>{% trans "Return Date" %}</label>
+          <input type="date" id="returnDate" class="form-control">
+        </div>
+
+<div class="mb-3">
+  <button 
+    class="btn btn-outline-primary w-100 d-flex justify-content-between align-items-center"
+    type="button" 
+    data-bs-toggle="collapse" 
+    data-bs-target="#extrasCollapse" 
+    aria-expanded="false" 
+    aria-controls="extrasCollapse"
+    id="extrasToggleBtn">
+    <span>
+      <i class="bi bi-plus-circle me-2"></i>
+      {% trans "Additional Options" %}
+    </span>
+    <i class="bi bi-chevron-down" id="extrasChevron"></i>
+  </button>
+  
+  <div class="collapse mt-2" id="extrasCollapse">
+    <div class="extras-list">
+      
+      <!-- Winter Tires -->
+      <div class="form-check d-flex justify-content-between align-items-center mb-2 p-2 rounded hover-bg">
+        <div>
+          <input class="form-check-input extra-checkbox" 
+                 type="checkbox" 
+                 id="extraWinterTires" 
+                 data-price="50">
+          <label class="form-check-label ms-2" for="extraWinterTires">
+            <i class="bi bi-snow text-primary"></i>
+            {% trans "Winter Tires" %}
+          </label>
+        </div>
+        <span class="ekstra">+€50/{% trans "day" %}</span>
+      </div>
+
+      <!-- GPS Navigation -->
+      <div class="form-check d-flex justify-content-between align-items-center mb-2 p-2 rounded hover-bg">
+        <div>
+          <input class="form-check-input extra-checkbox" 
+                 type="checkbox" 
+                 id="extraGPS" 
+                 data-price="30">
+          <label class="form-check-label ms-2" for="extraGPS">
+            <i class="bi bi-signpost-split text-success"></i>
+            {% trans "GPS Navigation" %}
+          </label>
+        </div>
+        <span  class="ekstra">+€30/{% trans "day" %}</span>
+      </div>
+
+      <!-- Baby Seat -->
+      <div class="form-check d-flex justify-content-between align-items-center mb-2 p-2 rounded hover-bg">
+        <div>
+          <input class="form-check-input extra-checkbox" 
+                 type="checkbox" 
+                 id="extraBabySeat" 
+                 data-price="10">
+          <label class="form-check-label ms-2" for="extraBabySeat">
+            <i class="bi bi-person-heart text-danger"></i>
+            {% trans "Baby Seat" %}
+          </label>
+        </div>
+        <span  class="ekstra">+€10/{% trans "day" %}</span>
+      </div>
+
+      <!-- Additional Driver -->
+      <div class="form-check d-flex justify-content-between align-items-center mb-2 p-2 rounded hover-bg">
+        <div>
+          <input class="form-check-input extra-checkbox" 
+                 type="checkbox" 
+                 id="extraDriver" 
+                 data-price="30">
+          <label class="form-check-label ms-2" for="extraDriver">
+            <i class="bi bi-person-plus text-warning"></i>
+            {% trans "Additional Driver" %}
+          </label>
+        </div>
+        <span  class="ekstra">+€30/{% trans "day" %}</span>
+      </div>
+
+      <!-- Full Insurance -->
+      <div class="form-check d-flex justify-content-between align-items-center mb-2 p-2 rounded hover-bg">
+        <div>
+          <input class="form-check-input extra-checkbox" 
+                 type="checkbox" 
+                 id="extraInsurance" 
+                 data-price="50">
+          <label class="form-check-label ms-2" for="extraInsurance">
+            <i class="bi bi-shield-check text-info"></i>
+            {% trans "Full Insurance Coverage" %}
+          </label>
+        </div>
+        <span  class="ekstra">+€50/{% trans "day" %}</span>
+      </div>
+
+      <!-- WiFi Hotspot -->
+      <div class="form-check d-flex justify-content-between align-items-center mb-2 p-2 rounded hover-bg">
+        <div>
+          <input class="form-check-input extra-checkbox" 
+                 type="checkbox" 
+                 id="extraWifi" 
+                 data-price="15">
+          <label class="form-check-label ms-2" for="extraWifi">
+            <i class="bi bi-wifi text-primary"></i>
+            {% trans "WiFi Hotspot" %}
+          </label>
+        </div>
+        <span  class="ekstra">+€15/{% trans "day" %}</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+        <hr>
+
+        <!-- PRICE BREAKDOWN -->
+        <div class="price-breakdown">
+  <p class="d-flex justify-content-between">
+    <span class="price-label">{% trans "Days" %}:</span>
+    <strong><span id="days" class="price-value">0</span></strong>
+  </p>
+
+  <p class="d-flex justify-content-between">
+    <span class="price-label">{% trans "Base Price" %}:</span>
+    <strong> € <span id="basePrice" class="price-value"> 0 </span></strong>
+  </p>
+
+  <p class="d-flex justify-content-between" id="extrasRow" style="display: none;">
+    <span class="price-label">{% trans "Extras" %}:</span>
+    <strong > + € <span id="extrasPrice" class="price-value"> 0 </span></strong>
+  </p>
+
+  <hr>
+
+  <p class="d-flex justify-content-between fs-5">
+    <span class="price-label fw-bold">{% trans "Total Price" %}:</span>
+    <strong> € <span id="totalPrice" class="price-value price-total"> 0 </span></strong>
+  </p>
+</div>
+
+        <p class="mt-2">
+          <strong
+            id="availabilityStatus"
+            class="availability-text">
+            {% trans "Select dates to check availability" %}
+          </strong>
+        </p>
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="bookBtn">
+          {% trans "Confirm Booking" %}
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- BOOKING MODAL -->
+<div class="modal fade" id="bookingModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3">
+
+      <h5 class="mb-3">
+        {% trans "Complete Your Booking" %}
+      </h5>
+
+      <div class="mb-2">
+        <label for="userName">
+          {% trans "Full Name" %} <span class="text-danger">*</span>
+        </label>
+        <input type="text" id="userName" class="form-control" required>
+        <div id="userNameError" class="invalid-feedback" style="display: none;">
+          {% trans "Please enter your full name" %}
+        </div>
+      </div>
+
+      <div class="mb-2">
+        <label for="userPhone">
+          {% trans "Phone Number" %} <span class="text-danger">*</span>
+        </label>
+        <input type="tel" id="userPhone" class="form-control" required>
+        <div id="userPhoneError" class="invalid-feedback" style="display: none;">
+          {% trans "Please enter a valid phone number" %}
+        </div>
+      </div>
+
+      <div class="mb-2">
+        <label for="userEmail">
+          {% trans "Email" %} <span class="text-danger">*</span>
+        </label>
+        <input type="email" id="userEmail" class="form-control" required>
+        <div id="userEmailError" class="invalid-feedback" style="display: none;">
+          {% trans "Please enter a valid email address" %}
+        </div>
+      </div>
+
+      <div class="mb-2">
+        <label for="userNote">
+          {% trans "Leave a note (optional)" %}
+        </label>
+        <textarea
+          id="userNote"
+          class="form-control"
+          rows="3"
+          placeholder="{% trans 'Optional' %}">
+        </textarea>
+      </div>
+
+      <div class="form-check my-3">
+        <input class="form-check-input" type="checkbox" id="ageConfirm">
+        <label class="form-check-label" for="ageConfirm">
+          {% trans "I confirm that I am over 21 years old to drive this car" %} <span class="text-danger">*</span>
+        </label>
+        <div id="ageConfirmError" class="invalid-feedback" style="display: none;">
+          {% trans "You must confirm that you are over 21 years old" %}
+        </div>
+      </div>
+
+      <div class="mt-3 d-flex gap-2">
+        <button
+          type="button"
+          class="btn btn-secondary w-50"
+          data-bs-dismiss="modal">
+          {% trans "Cancel" %}
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-primary w-50"
+          id="finalConfirmBtn">
+          {% trans "Confirm" %}
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  const CAR_ID = {{ car.id }};
+
+</script>
+
+{% endblock %}
+

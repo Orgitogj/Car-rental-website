@@ -1,0 +1,279 @@
+{% load i18n static %}
+{% get_current_language as CURRENT_LANGUAGE_CODE %}
+<!DOCTYPE html>
+<html lang="{{ request.LANGUAGE_CODE }}">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Car Rental{% endblock %}</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+ <link href="https://cdn.jsdelivr.net/npm/nouislider@15.7.0/dist/nouislider.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+</head>
+
+<body class="premium-body">
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+
+    <a class="navbar-brand" href="{% url 'home' %}">
+      Car Rental
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+      <ul class="navbar-nav align-items-center">
+<li class="nav-item">
+  <a class="nav-link {% if request.path == '/' %}active{% endif %}"
+     href="{% url 'home' %}">
+    {% trans "Home" %}
+  </a>
+</li>
+
+<li class="nav-item">
+  <a class="nav-link {% if '/cars/' in request.path %}active{% endif %}"
+     href="{% url 'cars' %}">
+    {% trans "Cars" %}
+  </a>
+</li>
+
+<li class="nav-item">
+  <a class="nav-link {% if '/about/' in request.path %}active{% endif %}"
+     href="{% url 'about' %}">
+    {% trans "About Us" %}
+  </a>
+</li>
+
+<li class="nav-item">
+  <a class="nav-link {% if '/contact/' in request.path %}active{% endif %}"
+     href="{% url 'contact' %}">
+    {% trans "Contact" %}
+  </a>
+</li>
+<li class="nav-item">
+  <a class="nav-link {% if '/booking/lookup/' in request.path %}active{% endif %}"
+     href="{% url 'booking_lookup' %}">
+    {% trans "Find My Booking" %}
+  </a>
+</li>
+
+
+<li class="nav-item dropdown me-3">
+<a class="nav-link dropdown-toggle d-flex align-items-center"
+   href="#"
+   role="button"
+   data-bs-toggle="dropdown">
+
+  {% if CURRENT_LANGUAGE_CODE == 'de' %}
+    <img src="{% static 'foto/de.png' %}" width="22" class="me-2">
+    <span>DE</span>
+
+  {% elif CURRENT_LANGUAGE_CODE == 'sq' %}
+    <img src="{% static 'foto/sq.png' %}" width="22" class="me-2">
+    <span>SQ</span>
+
+  {% elif CURRENT_LANGUAGE_CODE == 'it' %}
+    <img src="{% static 'foto/it.png' %}" width="22" class="me-2">
+    <span>IT</span>
+
+  {% else %}
+    <img src="{% static 'foto/en.png' %}" width="22" class="me-2">
+    <span>EN</span>
+  {% endif %}
+
+</a>
+
+  <ul class="dropdown-menu dropdown-menu-end">
+
+    {% if CURRENT_LANGUAGE_CODE != 'en' %}
+    <li>
+      <form action="{% url 'set_language' %}" method="post" class="px-3">
+        {% csrf_token %}
+        <input type="hidden" name="language" value="en">
+        <input type="hidden" name="next" value="{{ request.path_info }}">
+        <button type="submit" class="dropdown-item d-flex align-items-center">
+          <img src="{% static 'foto/en.png' %}" width="22" class="me-2">
+          English
+        </button>
+      </form>
+    </li>
+    {% endif %}
+
+    {% if CURRENT_LANGUAGE_CODE != 'sq' %}
+    <li>
+      <form action="{% url 'set_language' %}" method="post" class="px-3">
+        {% csrf_token %}
+        <input type="hidden" name="language" value="sq">
+ <input type="hidden" name="next" value="{{ request.path_info }}">
+        <button type="submit" class="dropdown-item d-flex align-items-center">
+          <img src="{% static 'foto/sq.png' %}" width="22" class="me-2">
+          Shqip
+        </button>
+      </form>
+    </li>
+    {% endif %}
+
+    {% if CURRENT_LANGUAGE_CODE != 'de' %}
+    <li>
+      <form action="{% url 'set_language' %}" method="post" class="px-3">
+        {% csrf_token %}
+        <input type="hidden" name="language" value="de">
+   <input type="hidden" name="next" value="{{ request.path_info }}">
+        <button type="submit" class="dropdown-item d-flex align-items-center">
+          <img src="{% static 'foto/de.png' %}" width="22" class="me-2">
+          Deutsch
+        </button>
+      </form>
+    </li>
+    {% endif %}
+{% if CURRENT_LANGUAGE_CODE != 'it' %}
+    <li>
+      <form action="{% url 'set_language' %}" method="post" class="px-3">
+        {% csrf_token %}
+        <input type="hidden" name="language" value="it">
+        <input type="hidden" name="next" value="{{ request.path_info }}">
+        <button type="submit" class="dropdown-item d-flex align-items-center">
+          <img src="{% static 'foto/it.png' %}" width="22" class="me-2">
+          Italiano
+        </button>
+      </form>
+    </li>
+    {% endif %}
+  </ul>
+</li>
+
+
+  </ul>
+</li>
+
+       <!-- ACCOUNT -->
+{% if user.is_authenticated %}
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle d-flex align-items-center"
+     href="#"
+     data-bs-toggle="dropdown">
+    <i class="bi bi-person-circle fs-4"></i>
+    <span class="ms-2">
+      {{ user.first_name }}
+    </span>
+  </a>
+
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li>
+      <a class="dropdown-item" href="{% url 'logout' %}">
+        <i class="bi bi-box-arrow-right me-2"></i>
+        {% trans "Logout" %}
+      </a>
+    </li>
+  </ul>
+</li>
+{% else %}
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle d-flex align-items-center"
+     href="#"
+     data-bs-toggle="dropdown">
+    <i class="bi bi-person-circle fs-4"></i>
+    <span class="ms-2">
+      {% trans "Account" %}
+    </span>
+  </a>
+
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li>
+      <a class="dropdown-item" href="{% url 'register' %}">
+        <i class="bi bi-person-plus me-2"></i>
+        {% trans "Sign Up" %}
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item" href="{% url 'login' %}">
+        <i class="bi bi-box-arrow-in-right me-2"></i>
+        {% trans "Log In" %}
+      </a>
+    </li>
+  </ul>
+</li>
+{% endif %}
+
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ================= PAGE CONTENT ================= -->
+<main>
+  {% block content %}{% endblock %}
+</main>
+<!-- ================= FOOTER ================= -->
+<footer class="bg-dark text-white pt-5 pb-4">
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-3">
+        <h5 class="text-warning">Car Rental</h5>
+        <p>{% trans "We offer high quality rental cars. Book now and enjoy your ride!" %}</p>
+      </div>
+
+      <div class="col-md-3">
+        <h5 class="text-warning">{% trans "Pages" %}</h5>
+        <p><a href="{% url 'home' %}" class="text-white">{% trans "Home" %}</a></p>
+        <p><a href="{% url 'cars' %}" class="text-white">{% trans "Cars" %}</a></p>
+        <p><a href="{% url 'about' %}" class="text-white">{% trans "About Us" %}</a></p>
+        <p><a href="{% url 'contact' %}" class="text-white">{% trans "Contact" %}</a></p>
+        <p><a href="{% url 'booking_lookup' %}">  {% trans "Find My Booking" %}</a></p>
+
+      </div>
+
+      <div class="col-md-3">
+        <h5 class="text-warning">{% trans "Contact" %}</h5>
+        <p>{% trans "Tirana, Albania" %}</p>
+        <p>info@carrental.com</p>
+        <p>+355 692963205</p>
+      </div>
+
+      <div class="col-md-3">
+        <h5 class="text-warning">{% trans "Follow Us" %}</h5>
+        <a href="https://www.facebook.com/share/18GnizQphv/?mibextid=wwXIfr" target="_blank">
+    <i class="bi bi-facebook me-3"></i>
+</a>
+
+<a href="https://www.instagram.com/orgitogjoci?igsh=dmk5eHU2c29raXo%3D&utm_source=qr" target="_blank">
+    <i class="bi bi-instagram me-3"></i>
+</a>
+
+<a href="https://www.linkedin.com/in/orgito-gjoci-5a4b7a34a?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank">
+    <i class="bi bi-linkedin"></i>
+</a>
+      </div>
+
+    </div>
+
+    <hr>
+    <p class="text-center mb-0">© 2026 Car Rental – {% trans "All Rights Reserved" %}</p>
+  </div>
+</footer>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.0/dist/nouislider.min.js"></script>
+
+<!-- Main JS -->
+<script src="{% static 'js/main.js' %}" defer></script>
+<script src="https://unpkg.com/htmx.org@1.9.10"></script>
+
+</body>
+</html>
