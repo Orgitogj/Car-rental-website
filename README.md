@@ -41,7 +41,6 @@ The system is designed with role-based access control, supporting three main rol
 ## Screenshots
 - Homepage
 - Car listings
-- User dashboard
 - Company dashboard
 - Booking page
 
