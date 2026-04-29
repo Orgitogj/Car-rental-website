@@ -39,7 +39,6 @@ The system is designed with role-based access control, supporting three main rol
 ---
 
 ## Screenshots
-> Add screenshots of key pages:
 - Homepage
 - Car listings
 - User dashboard
